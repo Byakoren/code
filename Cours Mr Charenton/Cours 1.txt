@@ -1,0 +1,24 @@
+        Bloc 1 : Support et mise à disposition de services informatiques
+
+Epreuve E4 : présentation de 10min avec portfolio / Q/S de 30min avec présentation des projets/exp pro. montrer qu'on se maintien
+            à jour sur différentes technologie.
+
+Epreuve E5 : Epreuve pratique de conception d'application. avec comception d'un réseau sur serveur sur l'année et modification pendant 
+            l'épreuve.
+
+Epreuve E6 : épreuve écrite de cyber sécurité.
+
+Flux RSS : 
+
+Veille Technologisue : s'intéresser aux différentes technologie existante et en création, comment les expoiter pour ne pas être dépassé 
+
+Feedly : essayer de passer sur NetVibes
+    Veille active : avoir un sujet qui m'intérèsse et je vais capitaliser dessus 
+    Veille passive : je m'inscris à des sites, qui dès qu'ils ont un nouvel article, vont me l'envoyer.
+    thème : cybersécu / plus performant dans l'entreprise / recherche pour le futur
+
+adresse ip cisco : 192.168.10.1     255.255.255.0 les 3 premiers nombre sont les indicatifs de l'ip
+
+DHCP : Dynamic Host Configuration Protocl (donner automatiquement une adresse IP à un ordi avec une configuration du serveur 
+        (onglet servive))
+DNS :  Domain Main System 

@@ -1,0 +1,15 @@
+Etape 1 : Analyse du besoin / Reformulation du besoin 
+Etape 2 : Analyse de l'existant 
+            - D'où on part
+            - Etat de l'art (est ce qu'il existe déjà des choses qui réponde à mon problème ou s'en rapproche)
+        Proposition de solution en fonction du triangle suivant :
+            - Temps
+            - Qualité
+            - Coût
+Etape 3 : Mise en place de la solution choisi:
+          - etape 1 (test)
+                - etape 2 (test).... 
+                - test de recettage (de livraison)
+Etape 4 : Mise en production (livraison au client)
+
+Etape 5 : REX
