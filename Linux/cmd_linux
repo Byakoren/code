@@ -1,0 +1,61 @@
+List commande Linux 
+
+- ls : liste des fichiers présent  
+
+- cd : accéder à un dossier exemple : cd /home/toto/Bureau 
+
+- cd .. : retourner au dossier précédent  
+
+- mv /home/toto/Bureau/Stylo /tmp (déplacer un dossier dans un autre dossier) (sert aussi à renommer un fichier)
+
+- mkdir : crée un dossier à son emplacement  
+
+- rmdir : supprimer un dossier  
+
+- man : manuel  
+
+- whatis : demander ce qu’est la commande (ex : whatis ls) 
+
+- info : même chose que man en moins exhaustif  
+
+- find : chercher un dossier  
+
+- cat : que contient ce fichier 
+
+- cp : copier/coller un fichier dans un autre endroit 
+
+ - su : devenir dieu  
+
+- adduser : ajouter un utilisateur 
+
+- deluser : suppr un utilisateur 
+
+- addgroup : ajouter un groupe 
+
+- delgroupe : suppr un groupe  
+
+- sudo passwd [nom d’utilisateur) : modifie le mdp d’un user 
+
+- usermod : change un utilisateur  
+
+- getent group : afficher la liste des groupes  
+
+- getent passwd : afficher la liste des utilisateurs 
+
+- chown : changer le propriétaire d’un fichier (sudo chown toto doc.txt) 
+
+- chgrp : change le groupe propriétaire d’un fichier ( chrp MonGroupe doc.txt) 
+
+- chmod : modifie les permissions d’un fichier ou un répertoire  
+
+- sudo usermod -aG user group (commande pour ajouter dans un groupe.)
+
+- awk -F: '$3 >= 1000 {print $1}' /etc/passwd (afficher les utilisateurs crée uniquement.)
+
+- getent group (afficher les groupes)
+- getent group | grep (lettre de ce que tu cherches)  commande avec la | (pipe) qui permet de rechercher avec les lettres ce que tu cherches en cherchant dans les listes que tu as chercher plus haut
+
+- droit d'accès : Execute = 1 , Write = 2 Read = 4. (write + read = 6)
+
+-chown → change owner – change le propriétaire d’un fichier (Ex : « chown toto doc.txt ») 
+
