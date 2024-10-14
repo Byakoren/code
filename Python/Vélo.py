@@ -6,6 +6,14 @@ def input_int(msg):
         except:
             print("Ce n'est pas un entier, essaye encore.")
 
+def input_float(msg):
+    while True:
+        try:
+            input_val = float(input(msg))
+            return input_val
+        except:
+            print("Ce n'est pas un nombre, essaye encore.")
+
 heure_debut = input_int("Quel est l'heure de début de la location du velo (sous format 24h)? ")
 heure_fin = input_int("Quel est l'heure de fin de la location de vélo (sous format 24h)? ")
 durer_location = heure_fin - heure_debut
