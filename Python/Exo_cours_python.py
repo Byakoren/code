@@ -177,15 +177,59 @@
 #     print("Vous êtes senior.")
 
 ######################################################################################
-n = 20
+# n = 20
 
-sommePaire = 0
-sommeTotale = 0
-for i in range(1, n + 1) :
-    if (i % 2 == 0) :
-        sommePaire = sommePaire + i
+# sommePaire = 0
+# sommeTotale = 0
+# for i in range(1, n + 1) :
+#     if (i % 2 == 0) :
+#         sommePaire = sommePaire + i
     
-    sommeTotale = sommeTotale + 1
+#     sommeTotale = sommeTotale + 1
 
-print(sommeTotale)
-print(sommePaire)
+# print(sommeTotale)
+# print(sommePaire)
+
+def input_int(msg):
+    while True:
+        try:
+            input_val = int(input(msg))
+            return input_val
+        except:
+            print("Ce n'est pas un entier, essaye encore.")
+
+def input_float(msg):
+    while True:
+        try:
+            input_val = float(input(msg))
+            return input_val
+        except:
+            print("Ce n'est pas un nombre, essaye encore.")
+
+
+
+
+
+# for i in range(5):
+#     valeur = input_int("Donne moi nombre. ")
+#     if valeur % 2 == 0:
+#         print("Ton nombre", valeur, "est pair. ")
+#     else:
+#         print("Ton nombre", valeur, "est impair. ")
+
+
+# valeur = input_int("Donne moi un nombre et je te donne ses résultats de sa table de multiplication. ")
+# for i in range(10):
+
+#     print(valeur, "x", i , "=", valeur * i)
+
+
+# for i in range(11):
+#     for valeur in range(1, 11):
+#          print(i, "x", valeur, "=", valeur * i)
+#     print()
+        
+for i in range(11):
+    print(f'{" "*(10-i)}{"["*i} {"]"*i}')
+for i in range(11):
+    print(f'{" "*(1+i)}{"["*(9-i)} {"]"*(9-i)}')
