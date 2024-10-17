@@ -1,3 +1,5 @@
+#Fonction à ne pas commenter pour faire fonctionner les codes dessous.
+
 def input_float(msg):
     while True:
         try:
@@ -14,38 +16,43 @@ def input_int(msg):
         except:
             print("Ce n'est pas un entier, essaye encore.")
 
-# note_1 = input_float("Donne moi une première note. ")
-# note_2 = input_float("Donne moi une deuxième note. ")
-# note_3 = input_float("Donne moi une troisième note. ")
-# note_4 = input_float("Donne moi une quatrème note. ")
-# note_5 = input_float("Donne moi une cinquième note. ")
+##################################################################################################################
+"""Exercice 1"""
 
-# moyenne = round((note_1 + note_2 + note_3 + note_4 + note_5)  / 5, 2)
+note_1 = input_float("Donne moi une première note. ")
+note_2 = input_float("Donne moi une deuxième note. ")
+note_3 = input_float("Donne moi une troisième note. ")
+note_4 = input_float("Donne moi une quatrème note. ")
+note_5 = input_float("Donne moi une cinquième note. ")
 
-# print("Votre moyenne est de :", moyenne)
+moyenne = round((note_1 + note_2 + note_3 + note_4 + note_5)  / 5, 2)
 
-# if moyenne < 10:
-#     print("Tu n'es pas admis.")
-# else :
-#     print("Tu es admis. ")
+print("Votre moyenne est de :", moyenne)
+
+if moyenne < 10:
+    print("Tu n'es pas admis.")
+else :
+    print("Tu es admis. ")
 
 
-#######################################################################################################
+######################################################################################################
+"""Exercice 2"""
 
-# valeur = input_int("Donne moi un nombre entier.")
-# pair = 0
-# impair = 0
+valeur = input_int("Donne moi un nombre entier.")
+pair = 0
+impair = 0
 
-# for x in range(1, valeur) : 
-#     if x%2 == 0 :
-#         pair += 1
-#     else : 
-#         impair += 1
+for x in range(1, valeur) : 
+    if x%2 == 0 :
+        pair += 1
+    else : 
+        impair += 1
 
-# print("Tu as", pair, "nombre pair entre 1 et ton nombre.")
-# print("Tu as", impair, "nombre impair entre 1 et ton nombre.")
+print("Tu as", pair, "nombre pair entre 1 et ton nombre.")
+print("Tu as", impair, "nombre impair entre 1 et ton nombre.")
 
 ########################################################################################################
+"""Exercice 3"""
 
 import random 
 
@@ -63,7 +70,6 @@ for essai  in range(point_de_vie):
             print("Il te reste", point_de_vie, "essai. ")
         else :
             print("Tu n'as plus d'essai, perdu !")
-            break
     elif nombre_user > nombre:
         point_de_vie -= 1
         print("Ton nombre est supérieur à mon nombre. ")
@@ -71,7 +77,6 @@ for essai  in range(point_de_vie):
             print("Il te reste", point_de_vie, "essai. ")
         else :
             print("Tu n'as plus d'essai, perdu !")
-            break
     else:
         print("Bravo, tu as gagné !")
         break

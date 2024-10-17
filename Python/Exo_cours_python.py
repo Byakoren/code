@@ -233,3 +233,8 @@ for i in range(11):
     print(f'{" "*(10-i)}{"["*i} {"]"*i}')
 for i in range(11):
     print(f'{" "*(1+i)}{"["*(9-i)} {"]"*(9-i)}')
+
+
+
+# import pyfiglet
+# print(pyfiglet.figlet_format("B.T.S SIO",font="doh",width=120)) 
