@@ -229,12 +229,144 @@ def input_float(msg):
 #          print(i, "x", valeur, "=", valeur * i)
 #     print()
         
-for i in range(11):
-    print(f'{" "*(10-i)}{"["*i} {"]"*i}')
-for i in range(11):
-    print(f'{" "*(1+i)}{"["*(9-i)} {"]"*(9-i)}')
+# for i in range(11):
+#     print(f'{" "*(10-i)}{"["*i} {"]"*i}')
+# for i in range(11):
+#     print(f'{" "*(1+i)}{"["*(9-i)} {"]"*(9-i)}')
 
 
 
 # import pyfiglet
 # print(pyfiglet.figlet_format("B.T.S SIO",font="doh",width=120)) 
+
+
+# i = 1
+# n = 10
+# sommeTotal =0
+# sommePaire =0
+# sommeimpaire =0
+# arret = True
+# while (arret):
+#     if (i % 2 == 0):
+#         sommePaire = sommePaire + i
+#     else :
+#         sommeimpaire= sommeimpaire +i
+
+#     sommeTotal = sommeTotal + i
+#     i = i+1
+#     print("nous somme dans la boucle while")
+#     if i>n :
+#         arret=False
+
+
+# print(arret)
+
+# print(sommeimpaire)
+# print(sommePaire)
+# print(sommeTotal) 
+
+
+# def est_premier(nombre):
+#     if nombre <= 1:
+#         return False
+#     for i in range(2,int(nombre ** 0.5) + 1):
+#         if nombre % i == 0:
+#             return False
+#     return True
+# for i in range(1,51):
+#     if est_premier(i):
+#         print(i, end=" ") 
+
+
+# def input_int(msg):
+#     while True:
+#         try:
+#             input_val = int(input(msg))
+#             return input_val
+#         except:
+#             print("Ce n'est pas un entier, essaye encore.")
+
+# N = input_int("Donne moi un nombre entier. ")
+# total = 0
+# last_index = 0
+# for i in range(N):
+#     total += i
+#     if total > N :
+#         print(last_index)
+#         break
+#     else :
+#         last_index = i
+
+
+
+
+# nombre = 0
+
+# while nombre != 100 :
+#     nombre = input_int("Trouve mon nombre : ")
+
+
+def input_float(msg):
+    while True:
+        try:
+            input_val = float(input(msg))
+            return input_val
+        except:
+            print("Ce n'est pas un nombre, essaye encore.")
+
+
+# valeur_inf = 0
+# valeur_sup = 0
+# valeur_big = 0
+# for i in range(10):
+#     nombre = -1
+#     while (nombre < 0) or (nombre > 20):
+#         nombre = input_float("Donne moi un nombre entre 0 et 20: ")
+#     if nombre < 10 :
+#         valeur_inf += 1
+#     elif nombre < 15 :
+#         valeur_sup += 1
+#     else :
+#         valeur_big += 1
+
+
+# if valeur_inf != 0:
+#     print("Tu as", valeur_inf,"nombre(s) strictement inférieur à 10.")
+# if valeur_sup != 0:
+#     print("Tu as", valeur_sup,"nombre(s) supérieur ou égale à 10 et strictement inférieur à 15.")
+# if valeur_big != 0:
+#     print("Tu as", valeur_big, "nombre(s) supérieur ou égale à 15.")
+
+
+    
+
+# import time
+
+
+# n = input_int("Donne moi un nombre entier positif : ")
+
+
+# for i in range(n, -1, -1):
+#     print(i)
+#     time.sleep(0.2)
+
+
+# import time
+
+# n = input_int("Donne moi un nombre entier positif : ")
+
+# while n >= 0:
+#     print(n)
+#     time.sleep(0.2)  
+#     n -= 1
+
+
+for i in range(1,20):
+    if i % 5 == 0 and i % 3 == 0 :
+        print("FizzBuzz")
+    elif i % 3 == 0 :
+        print("Fizz")
+    elif i % 5 == 0 :
+        print("Buzz")
+    else :
+        print(i)
