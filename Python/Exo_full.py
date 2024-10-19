@@ -15,7 +15,8 @@ choix = 0
 point_de_vie = 10
 
 while choix < 1 or choix > 2 :
-    choix = input_int("Si tu veux deviner un nombre tape 1, si tu veux m'en faire deviner un tape 2. ")
+    choix = input_int("Si tu veux deviner un nombre tape '1', si tu veux m'en faire deviner un tape '2'. Si tu veux quitter tape '3'  ")
+
     if choix == 1 : 
         nombre = random.randint(1, 100)
         for essai  in range(point_de_vie):
@@ -55,3 +56,5 @@ while choix < 1 or choix > 2 :
                 break
             else :
                 print("Connais pas ce mot recommence.")
+    elif choix == 3 :
+        break
