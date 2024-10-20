@@ -107,7 +107,7 @@ $tableau[6] = "AZERTY"
 
 
 #4) Recréer un tableau de longueur 463 qui contient la même chose que le tableau précèdent sauf le contenu de la 7eme case
-$MonTabFinal = $tableau[0..5+7..463]
+$MonTabFinal = $tableau[100..105+107..563]
 
 $MonTabFinal.Length
 

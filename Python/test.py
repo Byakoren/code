@@ -123,3 +123,16 @@
 # print("Résultat: ", resultat)                                #ça te donne la position de l'entier dans la liste.
 
 
+import random
+
+def generate_phone_numbers(quantity):
+  phone_numbers = []
+  for _ in range(quantity):
+    number = "0" + str(random.choice([6, 7]))
+    for _ in range(8):
+      number += str(random.randint(0, 9))
+    phone_numbers.append(number)
+  return phone_numbers
+
+numbers = generate_phone_numbers(30)
+print(numbers)
