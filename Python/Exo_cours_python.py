@@ -1,3 +1,20 @@
+def input_int(msg):
+    while True:
+        try:
+            input_val = int(input(msg))
+            return input_val
+        except:
+            print("Ce n'est pas un entier, essaye encore.")
+
+def input_float(msg):
+    while True:
+        try:
+            input_val = float(input(msg))
+            return input_val
+        except:
+            print("Ce n'est pas un nombre, essaye encore.")
+
+
 #Code permettant de calculer la moyenne d'une personne et de la lui donner.
 
 # nom = input("Quel est ton nom ? ")
@@ -190,25 +207,7 @@
 # print(sommeTotale)
 # print(sommePaire)
 
-def input_int(msg):
-    while True:
-        try:
-            input_val = int(input(msg))
-            return input_val
-        except:
-            print("Ce n'est pas un entier, essaye encore.")
-
-def input_float(msg):
-    while True:
-        try:
-            input_val = float(input(msg))
-            return input_val
-        except:
-            print("Ce n'est pas un nombre, essaye encore.")
-
-
-
-
+#############################################################################################################
 
 # for i in range(5):
 #     valeur = input_int("Donne moi nombre. ")
@@ -306,14 +305,6 @@ def input_float(msg):
 #     nombre = input_int("Trouve mon nombre : ")
 
 
-def input_float(msg):
-    while True:
-        try:
-            input_val = float(input(msg))
-            return input_val
-        except:
-            print("Ce n'est pas un nombre, essaye encore.")
-
 
 # valeur_inf = 0
 # valeur_sup = 0
@@ -338,7 +329,7 @@ def input_float(msg):
 #     print("Tu as", valeur_big, "nombre(s) supérieur ou égale à 15.")
 
 
-    
+#################################################################################################### 
 
 # import time
 
@@ -360,13 +351,37 @@ def input_float(msg):
 #     time.sleep(0.2)  
 #     n -= 1
 
+#####################################################################################################
+# for i in range(1,20):
+#     if i % 5 == 0 and i % 3 == 0 :
+#         print("FizzBuzz")
+#     elif i % 3 == 0 :
+#         print("Fizz")
+#     elif i % 5 == 0 :
+#         print("Buzz")
+#     else :
+#         print(i)
 
-for i in range(1,20):
-    if i % 5 == 0 and i % 3 == 0 :
-        print("FizzBuzz")
-    elif i % 3 == 0 :
-        print("Fizz")
-    elif i % 5 == 0 :
-        print("Buzz")
-    else :
+
+def input_float(msg):
+    while True:
+        try:
+            input_val = float(input(msg))
+            return input_val
+        except:
+            print("Ce n'est pas un nombre, essaye encore.")
+
+
+def table_multiplication(nombre):
+    liste = []
+
+    for i in range(11):
+        result = round(nombre * i, 1)
+        liste.append(f"{nombre} * {i} = {result}")
+
+    for i in liste:
         print(i)
+
+table_multiplication(input_float("Quelle est la table de multiplication que tu veux ? "))
+
+

@@ -75,3 +75,4 @@ SELECT Item.bonus_for from Item, Personnage WHERE Personnage.nom = "Krakos633" a
 SELECT Personnage.nom from Personnage,Item,Categorie where Categorie.nom = "Epée Longue"
 AND Categorie.id_categorie = Item.id_categorie
 AND Item.id_perso = Personnage.id_perso ;
+

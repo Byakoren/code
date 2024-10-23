@@ -7,6 +7,7 @@ CREATE TABLE CONTRAT_SERVICE (
   date_expiration date,
   nom_sav VARCHAR(25),
   num_sav int(10),
+  type_ VARCHAR(30),
   PRIMARY KEY (ID_contrat)
 );
 
@@ -55,7 +56,7 @@ CREATE TABLE  MATERIEL (
   ID_stagiaire INT(3) NOT NULL,
   date_pret date,
   date_retour date,
-  est_rendu BOOL,
+  duree_en_jour int(3),
   PRIMARY KEY (id_materiel, ID_stagiaire),
   FOREIGN KEY (ID_materiel) REFERENCES MATERIEL,
   FOREIGN KEY (ID_stagiaire) REFERENCES STAGIAIRE
@@ -119,12 +120,12 @@ insert into CATEGORIE VALUES (9,'Les trois premiers tomes de Berserk parce que p
 insert into CATEGORIE VALUES (10,'Les cheveux de Mehdi parce que je les veux aussi');
 
 
-insert into CONTRAT_SERVICE VALUES (1,'2024-11-30','LG',0210812124);
-insert into CONTRAT_SERVICE VALUES (2,'2024-12-30','SAMSUNG',0136957796);
-insert into CONTRAT_SERVICE VALUES (3,'2025-02-28','LOGITECH',0282069952);
-insert into CONTRAT_SERVICE VALUES (4,'2025-04-30','LENOVO',0164814114);
-insert into CONTRAT_SERVICE VALUES (5,'2025-05-30','ASUS',0207771124);
-insert into CONTRAT_SERVICE VALUES (6,'2025-08-30','MiCROSOFT',0179540519);
+insert into CONTRAT_SERVICE VALUES (1,'2024-11-30','LG',0210812124,'Contrat de maintenance ');
+insert into CONTRAT_SERVICE VALUES (2,'2024-12-30','SAMSUNG',0136957796,'Contrat de maintenance');
+insert into CONTRAT_SERVICE VALUES (3,'2025-02-28','LOGITECH',0282069952,'Contrat de maintenance');
+insert into CONTRAT_SERVICE VALUES (4,'2025-04-30','LENOVO',0164814114,'Contrat de maintenance');
+insert into CONTRAT_SERVICE VALUES (5,'2025-05-30','ASUS',0207771124,'Contrat de maintenance');
+insert into CONTRAT_SERVICE VALUES (6,'2025-08-30','MiCROSOFT',0179540519,'Contrat de maintenance');
 
 
 insert into MATERIEL VALUES (1,'disponible',NULL,1);
@@ -143,16 +144,16 @@ insert into MATERIEL VALUES (13,'disponible',3,3);
 insert into MATERIEL VALUES (14,'en réparation',2,4);
 insert into MATERIEL VALUES (15,'en réparation',2,6);
 
-insert into PRET VALUES (1,7,'2024-09-12','2024-12-01',0);
-insert into PRET VALUES (3,7,'2024-09-12','2024-12-01',0);
-insert into PRET VALUES (4,7,'2024-09-12','2024-12-01',0);
-insert into PRET VALUES (5,7,'2024-09-12','2024-12-01',0);
-insert into PRET VALUES (8,7,'2024-09-12','2024-12-01',0);
-insert into PRET VALUES (2,12,'2024-10-01','2024-10-01',0);
-insert into PRET VALUES (9,26,'2024-09-06','2024-09-26',1);
-insert into PRET VALUES (10,4,'2024-10-03','2025-05-12',0);
-insert into PRET VALUES (7,1,'2024-10-20','2024-12-01',0);
-insert into PRET VALUES (2,23,'2024-10-01','2024-10-21',1);
+insert into PRET VALUES (1,7,'2024-09-12','2024-12-01',80);
+insert into PRET VALUES (3,7,'2024-09-12','2024-12-01',80);
+insert into PRET VALUES (4,7,'2024-09-12','2024-12-01',80);
+insert into PRET VALUES (5,7,'2024-09-12','2024-12-01',80);
+insert into PRET VALUES (8,7,'2024-09-12','2024-12-01',80);
+insert into PRET VALUES (2,12,'2024-10-01','2024-10-02',2);
+insert into PRET VALUES (9,26,'2024-09-06','2024-09-26',20);
+insert into PRET VALUES (10,4,'2024-10-03','2025-05-12',221);
+insert into PRET VALUES (7,1,'2024-10-20','2024-12-01',42);
+insert into PRET VALUES (2,23,'2024-10-01','2024-10-21',20);
 
 --Création des reqûetes SQL--
 

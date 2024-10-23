@@ -3,31 +3,31 @@ Ecrire un programme Python qui tire une valeur aléatoire x entre 0 et 100 et qu
 L'algorithme répond à chaque fois si la valeur est plus grande, plus petite ou égale à la valeur à deviner. Un compteur incrémenté à 
 chaque passage donnera le nombre de tours qui ont été nécessaires pour trouver le nombre mystère."""
 
-def input_int(msg):
-    while True:
-        try:
-            input_val = int(input(msg))
-            return input_val
-        except:
-            print("Ce n'est pas un entier, essaye encore.")
+# def input_int(msg):
+#     while True:
+#         try:
+#             input_val = int(input(msg))
+#             return input_val
+#         except:
+#             print("Ce n'est pas un entier, essaye encore.")
 
-import random 
+# import random 
 
-liste_nombre = list(range(0, 101))
-nombre = random.choice(liste_nombre)
+# liste_nombre = list(range(0, 101))
+# nombre = random.choice(liste_nombre)
 
-essai = 0
-nombre_user = -1
+# essai = 0
+# nombre_user = -1
 
-while nombre != nombre_user:
-    nombre_user = input_int("Devine un nombre entre 0 et 100. ")
-    essai += 1
-    if nombre_user < nombre :
-        print("Ton nombre est inférieur à mon nombre. ")
-    elif nombre_user > nombre :
-        print("Ton nombre est supérieur à mon nombre. ")
-    else :
-        print("Bravo mon nombre était bien", nombre, "Tu as mis", essai, "essai(s) pour trouver. ")
+# while nombre != nombre_user:
+#     nombre_user = input_int("Devine un nombre entre 0 et 100. ")
+#     essai += 1
+#     if nombre_user < nombre :
+#         print("Ton nombre est inférieur à mon nombre. ")
+#     elif nombre_user > nombre :
+#         print("Ton nombre est supérieur à mon nombre. ")
+#     else :
+#         print("Bravo mon nombre était bien", nombre, "Tu as mis", essai, "essai(s) pour trouver. ")
 
 
 """Exercice 4 : Factorielle itérative.
