@@ -1,0 +1,15 @@
+
+
+/* "Sélectionnez une propriété et sa valeur à modifier en fonction du sélecteur choisis." */
+
+h1, p {
+    color: aqua;
+    font-size: 12px;
+}
+
+/* "Pour modifier qu'un seul paragraphe ou autre sélecteur on utilisera class en HTML et le lieara comme ceci." */
+
+.ma-classe {
+    color: #663399;
+}
+
