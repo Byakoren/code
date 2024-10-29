@@ -13,3 +13,12 @@ h1, p {
     color: #663399;
 }
 
+/* "Ou on peut utiliser id= et on appelera son nom comme ceci" */
+
+#logo {
+    
+}
+
+a {
+    color:black
+}

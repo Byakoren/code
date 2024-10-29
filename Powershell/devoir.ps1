@@ -10,7 +10,7 @@ $Maliste = Import-Csv -Path C:\TMP\test.csv -Delimiter ";"
 # }
 #$Maliste | Export-Csv -Path C:\TMP\test.csv -Delimiter ";"
 
-#Création de dossier via les prénoms dans la liste.
+# Création de dossier via les prénoms dans la liste.
 # foreach ($user in $Maliste)
 # {
 #     mkdir -Path C:\TMP -name $user.prenom
