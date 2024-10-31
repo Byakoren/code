@@ -43,3 +43,21 @@ body {
     color: #333;
     margin: 0;
 }
+
+input[type='submit'] {
+    margin-top: 20px;
+    font-size: 1em;
+}
+fieldset {
+    background-color: #404446 ;
+    width: 70% ;
+    margin: auto;
+    padding: 10px ;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+legend {
+    color: white;
+    font-size: 1.3em;
+}

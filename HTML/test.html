@@ -56,7 +56,65 @@
                 </div>
         </section>
 
+        <!-- Exemple de liste de bouton radio. -->
+        <section>
+            <form method="get" action="">
+                    <fieldset>
+                        <legend>Quel est votre âge?</legend>
+                        <p>
+                            Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
+                            <input type="radio" name="age" value="moins15" id="moins15"> <label for="moins15">Moins de 15 ans</label><br>
+                            <input type="radio" name="age" value="medium15-25" id="medium15-25"> <label for="medium15-25">15-25 ans</label><br>
+                            <input type="radio" name="age" value="medium25-40" id="medium25-40"> <label for="medium25-40">25-40 ans</label><br>
+                            <input type="radio" name="age" value="plus40" id="plus40"> <label for="plus40">Plus de 40 ans</label>
+                        </p>
+                    </fieldset>
+
+        <!-- Exemple de liste de cases à cocher. -->
+        <section>
+            <form method="get" action="">
+                <fieldset>
+                    <Legend>Langage</Legend>
+                    <p>
+                        Cochez les langages que maîtrisez :<br>
+                        <input type="checkbox" name="frites" id="frites"> <label for="frites">BYTHON</label><br>
+                        <input type="checkbox" name="steak" id="steak"> <label for="steak">HTML</label><br>
+                        <input type="checkbox" name="epinards" id="epinards"> <label for="epinards">CSS</label><br>
+                        <input type="checkbox" name="huitres" id="huitres"> <label for="huitres">java</label>
+                    </p>
+                </fieldset>
+                </form>
+        </section>
+
+        <!-- Exemple de liste déroulante  -->
+        <section>
+            <form method="get" action="">
+                <fieldset>
+                    <legend>BTS</legend>
+                    <p>
+                        <label for="pays">Dans quel BTS êtes vous?</label><br>
+                        <select name="pays" id="pays">
+                            <option value="espagne">SIO</option>
+                            <option value="royaume-uni">Banque</option>
+                            <option value="canada">MGO</option>
+                            <option value="japon">BTS?</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Vos coordonées</legend>
+                    <label for="prenom">Prénom</label>
+                    <input type="text" name="prenom" id="prenom">
+                    <label for="nom">Nom de famille</label>
+                    <input type="text" name="nom" id="nom">
+                    <label for="e-mail">Email</label>
+                    <input type="email" name="email" id="email" autofocus required >
+                    <input type="submit" value="Clique si t'es un bonhomme.">
+                </fieldset>
+            </form>
+        </section>
     </main>
-    </body>
+</body>
 </html>
 

@@ -91,3 +91,54 @@ collorer seulement quelques mots dans un paragraphe." -->
 <div> balise de type "block", qui entoure un bloc de texte. </div>
 
 
+<!-- "crée des tableaux en html" -->
+ <table>
+    <caption>Titre des tableaux à mettre ici</caption>
+    <!-- tr pour la ligne  -->
+    <tr>
+        <th>titre colonne 1</th>
+        <th>titre colonne 2</th>
+        <th>titre colonne 3</th>
+    </tr>
+    <tr>
+        <td>cellule 1</td>
+        <td>cellule 2</td>
+        <td>cellule 3</td>
+    </tr>
+ </table>
+
+<!-- "crée des formulaires en html" -->
+"La balise form qui contient toutes les informations du formulaire."
+<form action="" method="get">
+    L'attribut method indique par quel moyen les données vont être envoyées. get et post.
+    L'attribut action indique l'adresse de la page ou du programme qui va traiter les informations. 
+
+    <label for="prenom">Votre prénom</label>
+    Un libellé est un champ de texte prérempli avec une indication pour guider le visiteur du site sur ce qu’il doit écrire.
+
+    <input type="text" name="prenom" id="prenom">
+
+    version multiligne
+    <textarea type="text" name="prenom" id="prenom"></textarea>
+
+    <input type="password">
+    <input type="e-mail">
+    <input type="url">
+    <input type="tel">
+
+
+    <input type="checkbox">
+    Le checkbox sert à crée des cases à cocher.
+
+    <input type="checkbox" name="choix" checked>
+    pour cocher une case par défaut.
+
+    <input type="radio">
+    bouton "radio" à choix unique 
+</form>
+
+
+<fieldset>
+    Permet de regrouper visellement plusieurs champs
+    <Legend>Permet de donner un titre à ses sections.</Legend>
+</fieldset>

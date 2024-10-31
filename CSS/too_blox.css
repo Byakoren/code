@@ -1,20 +1,21 @@
 
 
-/* "Sélectionnez une propriété et sa valeur à modifier en fonction du sélecteur choisis." */
+Sélectionnez une propriété et sa valeur à modifier en fonction du sélecteur choisis.
 
 h1, p {
     color: aqua;
     font-size: 12px;
 }
 
-/* "Pour modifier qu'un seul paragraphe ou autre sélecteur on utilisera class en HTML et le lieara comme ceci." */
-"On utilisera tex-shadow pour ajouter une ombre"
+Pour modifier qu un seul paragraphe ou autre sélecteur on utilisera class en HTML et le lieara comme ceci.
+On utilisera tex-shadow pour ajouter une ombre
 
 .ma-classe {
     color: #663399;
 }
 
-/* "Ou on peut utiliser id= et on appelera son nom comme ceci" */
+
+Ou on peut utiliser id= et on appelera son nom comme ceci
 
 #logo {
     
@@ -24,9 +25,10 @@ a {
     color:black
 }
 
-/* "Créer un carré via une classe carré créer en html" */
-"On pourra utiliser border-radius pour arrondir les angles du carré." 
-"On utilisera box-shadow pour ajouter une ombre"
+
+Créer un carré via une classe carré créer en html
+On pourra utiliser border-radius pour arrondir les angles du carré.
+On utilisera box-shadow pour ajouter une ombre
 
 .carre {
     width: 150px;
@@ -46,9 +48,72 @@ a {
     margin: 0;
 }
 
-"pour rajouter de l'espace entre les choses."
+pour rajouter de l espace entre les choses.
+
 p {
     margin: 50px;
     padding:  50px;
     margin: auto;    /* pour placer au milieu automatiquement */
+}
+
+Rendre ses blocks flexible
+
+.conteneur {
+    /* Alignez les éléments d'un conteneur avec  display: flex; */
+    display: flex;
+    /* Donnez leur une direction avec la propriété  flex-direction */
+    flex-direction: row;
+    justify-content: space-around;
+    /* Retournez à la ligne avec la propriété  flex-wrap */
+    flex-wrap: wrap ;                  activer le retour à la ligne automatique
+    gap: 20px;                         ajouter des espaces entre les éléments
+}
+
+
+CSS Grids pour une meilleur mise en page. On peut aussi modifier qu un seul élément de son grid en les nommants un part un dans le fichier html
+
+.conteneur {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;         nombre et taille des éléments de la grille par exemple ici une grille de 5 colonne faisant la même taille
+    grid-template-rows: ;                               la même chose pour les rangées.
+    gap: 20px ;                                         pour faire des espaces
+}
+
+a {
+    display: block;   transformer un élément inline en block
+    display: inline;  transformer un élément block en inline
+    display: none;    cacher les blocks
+}
+
+/* Le positionnement relatif permet de décaler l'élément par rapport à sa position normale.
+   Le positionnement absolu permet de placer un élément n'importe où sur la page (en haut à gauche, en bas à droite, tout au centre, etc.).
+   D'autres types de positionnements comme "fixed" ou encore "sticky", qui ont des comportements assez semblables, peuvent être utiles si l'on veut
+   qu'un élément, tel que le menu de navigation par exemple, reste à l'écran. */
+
+   a {
+    position: absolute;
+    position: relative;
+   }
+
+
+Création des bordures du tableau
+
+td {
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+}
+
+
+Modification de l apparence du formulaire
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+}
+input {
+    padding: 10px;
+    border: 1px solid black;
 }
