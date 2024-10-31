@@ -1,26 +1,3 @@
-# import random 
-
-# #Fonction qui va choisir un mot de manière aléatoire dans une liste. 
-# def generation_mot():
-#     liste_mot = ["python", "ordinateur", "javascript", "voiture", "labyrinthe", "pyramide", "spectacle", "crocodile", "bibliotheque", "parachute", "papillon", "mystère","parapluie", "chocolat", "vacances", "minecraft", "pokemon", "chat", "chien", "oiseau", "fleur", "livre"]
-#     mot = random.choice(liste_mot)
-#     return mot 
-
-# def pendu():
-#     mot_a_trouver = generation_mot()
-
-
-
-
-
-
-
-
-
-
-##################################################################################################
-
-
 import random
 
 # Générer un mot aléatoire à partir d'une liste existante
