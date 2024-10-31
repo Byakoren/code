@@ -8,6 +8,7 @@ h1, p {
 }
 
 /* "Pour modifier qu'un seul paragraphe ou autre sélecteur on utilisera class en HTML et le lieara comme ceci." */
+"On utilisera tex-shadow pour ajouter une ombre"
 
 .ma-classe {
     color: #663399;
@@ -21,4 +22,33 @@ h1, p {
 
 a {
     color:black
+}
+
+/* "Créer un carré via une classe carré créer en html" */
+"On pourra utiliser border-radius pour arrondir les angles du carré." 
+"On utilisera box-shadow pour ajouter une ombre"
+
+.carre {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carre p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+}
+
+"pour rajouter de l'espace entre les choses."
+p {
+    margin: 50px;
+    padding:  50px;
+    margin: auto;    /* pour placer au milieu automatiquement */
 }
