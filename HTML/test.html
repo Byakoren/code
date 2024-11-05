@@ -1,120 +1,183 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
-    <head>
-        <meta charset="utf-8">
-        <title>Mon site.</title>
-        <link href="../CSS/test.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    </head>
-
-    <body>
-        <main>
-            <section>
-                <div style="display: grid; place-items: center;">
-                    <a href="https://x.com/"><img src="https://cdn.discordapp.com/emojis/1119637397009879131.gif?size=56&quality=lossless" alt="feur" title="clique moi dessus" width="150" height="150"></a><br>
-                    <a href="#ancre_liste">vers ma liste</a>
-                    <a href="#ancre_chat">Vers mes chats</a>
-                </div>
-            </section>
-
-            <section>
-                <h1>Ceci est un titre inspiratif.</h1>
-                    <p>Mais, vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd’hui avec vous, je dirais que c’est d’abord des rencontres, des gens qui m’ont tendu la main, peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinée… Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l’interlocuteur en face, je dirais, le miroir qui vous aide à avancer. Alors ce n’est pas mon cas, comme je le disais là, puisque moi au contraire, j’ai pu ; et je dis merci à la vie, je lui dis merci, je chante la vie, je danse la vie… Je ne suis qu’amour ! Et finalement, quand beaucoup de gens aujourd’hui me disent : « Mais comment fais-tu pour avoir cette humanité ? » Eh bien je leur réponds très simplement, je leur dis que c’est ce goût de l’amour, ce goût donc qui m’a poussé aujourd’hui à entreprendre une construction mécanique, mais demain, qui sait, peut-être simplement à me mettre au service de la communauté, à faire le don, le don de soi…</p>
-                    <p>Feur.</p>
-            </section>
-
-            <section>
-            <ul><h2 id="ancre_liste">Liste sans description</h2>
-                <li>Les chats c'est bien,</li>
-                <li>Les chiens un peu moins,</li>
-                <li>Les loutres c'est choupis,</li>
-                <li>Mais faut pas oublier que l'âne c'est fait le dragon. </li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../CSS/test.css" rel="stylesheet">
+    <title>Portfolio de Byakoren</title>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1 id="typing-text"></h1>
+        <p>Développeur Web et Créateur de Solutions Digitales</p>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#portfolio">Projets</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </section>
+        </nav>
+    </header>
 
-        <section>
-            <h3 id="ancre_chat">Mes chats d'amour.</h3>
-                <p>Je vais donc vous présenter mes chats d'amour en commençant par la plus belle.</p>
-                <div style="display: grid; place-items: center;">
-                    <img src="https://cdn.discordapp.com/attachments/646091003723513866/1300824151732519015/20240725_111138.jpg?ex=67223e65&is=6720ece5&hm=cd4e95bc75e856922567cda162cea3a878ecd14407cfe2ebfb61d7af806e6611&" alt="feur" title="MA GROSSE CHATTE." width="200" height="250">
-                </div>
-                <p>Ensuite voici le petit chat Lime.</p>
-                <div style="display: grid; place-items: center;">
-                    <img src="https://cdn.discordapp.com/attachments/524677061151948821/1298772215751508000/20241023_181618.jpg?ex=672207a2&is=6720b622&hm=cbe70f2146bd32369c8b0c66cce7673a8e6777ce853fcf4d4e6456d4b6ab24b5&" alt="feur" title="Le jugé pas il est HPI." width="200" height="250">
-                </div>
-                <p>Je ne le présente plus tout le monde le connait déjà....</p>
-                <div style="display: grid; place-items: center;">
-                    <img src="https://cdn.discordapp.com/attachments/646091003723513866/1300831250348642426/20230221_161201.jpg?ex=67224502&is=6720f382&hm=4f367b7918cd898593200fbc30c05c1cb58b45128808844ea21b20a56203b1fa&" alt="feur" title="Tommy c'est toi?" width="250" height="200">
-                </div>
-                <p>Puisqu'on est pas raciste je vous mets quand même une photo de chien.</p>
-                <div style="display: grid; place-items: center;">
-                    <img src="https://cdn.discordapp.com/attachments/646091003723513866/1300832461973884999/20230518_170044.jpg?ex=67224623&is=6720f4a3&hm=004b1c8e36db4fbffa3aefeb9616a3a0b25f3113d99c0ba3fd89c31aaf7ec42d&" alt="feur" title="Il est largement moins beau que les chats" width="250" height="200">
-                </div>
-        </section>
+    <!-- Section À propos -->
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis passionné par le développement web et la création de projets innovants. Mon expertise couvre la conception de sites dynamiques, le développement front-end et back-end, ainsi que l'intégration de solutions personnalisées pour mes clients.</p>
+    </section>
 
-        <!-- Exemple de liste de bouton radio. -->
-        <section>
-            <form method="get" action="">
-                    <fieldset>
-                        <legend>Quel est votre âge?</legend>
-                        <p>
-                            Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
-                            <input type="radio" name="age" value="moins15" id="moins15"> <label for="moins15">Moins de 15 ans</label><br>
-                            <input type="radio" name="age" value="medium15-25" id="medium15-25"> <label for="medium15-25">15-25 ans</label><br>
-                            <input type="radio" name="age" value="medium25-40" id="medium25-40"> <label for="medium25-40">25-40 ans</label><br>
-                            <input type="radio" name="age" value="plus40" id="plus40"> <label for="plus40">Plus de 40 ans</label>
-                        </p>
-                    </fieldset>
+    <!-- Section BTS SIO -->
+    <section id="bts-sio">
+        <h2>BTS SIO - Services Informatiques aux Organisations</h2>
+        <p>Le BTS SIO est une formation spécialisée en informatique qui prépare aux métiers du développement et de l'administration des systèmes d'information. Ce cursus propose deux options :</p>
+        
+        <div class="options">
+            <div class="option" id="slam">
+                <h3>Option SLAM</h3>
+                <p>Solutions Logicielles et Applications Métier (SLAM) : se concentre sur le développement de logiciels, d'applications et la gestion des bases de données. C'est cette option que j'ai choisie pour approfondir mes compétences en programmation et en conception de solutions logicielles.</p>
+            </div>
+            
+            <div class="option" id="sisr">
+                <h3>Option SISR</h3>
+                <p>Solutions d'Infrastructure, Systèmes et Réseaux (SISR) : orientée vers l'administration des réseaux, la sécurité et la gestion des infrastructures informatiques.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Exemple de liste de cases à cocher. -->
-        <section>
-            <form method="get" action="">
-                <fieldset>
-                    <Legend>Langage</Legend>
-                    <p>
-                        Cochez les langages que maîtrisez :<br>
-                        <input type="checkbox" name="frites" id="frites"> <label for="frites">BYTHON</label><br>
-                        <input type="checkbox" name="steak" id="steak"> <label for="steak">HTML</label><br>
-                        <input type="checkbox" name="epinards" id="epinards"> <label for="epinards">CSS</label><br>
-                        <input type="checkbox" name="huitres" id="huitres"> <label for="huitres">java</label>
-                    </p>
-                </fieldset>
-                </form>
-        </section>
+    <!-- Section Compétences -->
+    <section id="skills">
+        <h2>Compétences</h2>
+        <div class="skills-list">
+            <div class="skill" id="html-skill">
+                <img src="C:\Users\thoma\Pictures\VRChat\HTML5_logo_and_wordmark.svg.png" alt="HTML" class="skill-icon">
+                <h3>HTML</h3>
+                <p>Maîtrise de la création de structures de pages web claires, sémantiques et optimisées pour le référencement.</p>
+            </div>
+            <div class="skill" id="css-skill">
+                <img src="C:\Users\thoma\Pictures\VRChat\CSS3_logo_and_wordmark.svg.png" alt="CSS" class="skill-icon">
+                <h3>CSS</h3>
+                <p>Compétence en design web moderne, avec des interfaces adaptatives et visuellement attrayantes.</p>
+            </div>
+            <div class="skill" id="js-skill">
+                <img src="C:\Users\thoma\Pictures\VRChat\javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript" class="skill-icon">
+                <h3>JavaScript</h3>
+                <p>Interactivité et animations dynamiques pour une expérience utilisateur améliorée.</p>
+            </div>
+            <div class="skill" id="python-skill">
+                <img src="C:\Users\thoma\Pictures\VRChat\Python-programming-logo-on-transparent-background-PNG.png" alt="Python" class="skill-icon">
+                <h3>Python</h3>
+                <p>Expertise en développement d'applications et en automatisation.</p>
+            </div>
+            <div class="skill" id="sql-skill">
+                <img src="C:\Users\thoma\Pictures\VRChat\Sql_data_base_with_logo.png" alt="SQL" class="skill-icon">
+                <h3>SQL</h3>
+                <p>Capacité à concevoir et interroger des bases de données robustes pour des applications performantes.</p>
+            </div>
+            <div class="skill" id="logic-skill">
+                <img src="C:\Users\thoma\Pictures\VRChat\2618988.png" alt="Logique et Jeux Vidéo" class="skill-icon">
+                <h3>Logique & Jeux Vidéo</h3>
+                <p>Excellent raisonnement logique, aiguisé par des années d'expérience dans le gaming stratégique.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Exemple de liste déroulante  -->
-        <section>
-            <form method="get" action="">
-                <fieldset>
-                    <legend>BTS</legend>
-                    <p>
-                        <label for="pays">Dans quel BTS êtes vous?</label><br>
-                        <select name="pays" id="pays">
-                            <option value="espagne">SIO</option>
-                            <option value="royaume-uni">Banque</option>
-                            <option value="canada">MGO</option>
-                            <option value="japon">BTS?</option>
-                        </select>
-                    </p>
-                </fieldset>
+    <!-- Section Certifications -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <p>Voici quelques-unes de mes certifications qui valident mes compétences et mon expertise dans le domaine de la technologie et du développement.</p>
+        
+        <div class="certification-list">
+            <div class="certification">
+                <h3>Certification Python</h3>
+                <p>Certification en Python pour le développement d'applications et l'automatisation.</p>
+                <span class="date">Lime/Full 2024</span>
+            </div>
+            
+            <div class="certification">
+                <h3>RGPD</h3>
+                <p>BLA BLA sur le RGPD</p>
+                <span class="date">Septembre 2024</span>
+            </div>
+            
+            <div class="certification">
+                <h3>Certification HTML & CSS</h3>
+                <p>Expertise en structuration de pages et en design avec HTML et CSS.</p>
+                <span class="date">Octobre 2024</span>
+            </div>
+            
+            <div class="certification">
+                <h3>Certification ANSSI</h3>
+                <p>BLABLA SUR L'ANSSI.</p>
+                <span class="date">Septembre 2024</span>
+            </div>
+        </div>
+    </section>
 
-                <fieldset>
-                    <legend>Vos coordonées</legend>
-                    <label for="prenom">Prénom</label>
-                    <input type="text" name="prenom" id="prenom">
-                    <label for="nom">Nom de famille</label>
-                    <input type="text" name="nom" id="nom">
-                    <label for="e-mail">Email</label>
-                    <input type="email" name="email" id="email" autofocus required >
-                    <input type="submit" value="Clique si t'es un bonhomme.">
-                </fieldset>
-            </form>
-        </section>
-    </main>
+    <!-- Section Portfolio -->
+    <section id="portfolio">
+        <h2>Mes Projets</h2>
+        <div class="portfolio-gallery">
+            <div class="project">
+                <img src="minecraft.png" alt="Projet 1">
+                <h3>Projet 1</h3>
+                <p>Description rapide du projet.</p>
+            </div>
+            <div class="project">
+                <img src="projet2.jpg" alt="Projet 2">
+                <h3>Projet 2</h3>
+                <p>Description rapide du projet.</p>
+            </div>
+            <div class="project">
+                <img src="projet3.jpg" alt="Projet 3">
+                <h3>Projet 3</h3>
+                <p>Description rapide du projet.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section id="testimonials">
+        <h2>Témoignages</h2>
+        <div class="testimonial">
+            <p>"J'ai jamais vu un gars aussi fort de ma vie, dans absolument tous les domaines c'est un Dieu, j'aimerai être comme lui plus grand."</p>
+            <p><strong>Full</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"J'ai eu 2 mewtwo sur pokémon TCG, c'est pas le sujet my bad, Byako parle trop quand il est fatigué."</p>
+            <p><strong>Lime</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"Il veut pas m'attendre pour arcane..."</p>
+            <p><strong>LaFraise</strong></p>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form action="contact.php" method="post">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <button id="back-to-top">↑</button>
+
+    <footer>
+        <p>&copy; 2024 Portfolio de Byakoren. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
-
