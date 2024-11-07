@@ -1,201 +1,222 @@
-/* Palette de couleurs */
+/* Palette de couleurs. */
 :root {
-    --primary-color: #0f2027;      /* Couleur de fond principale */
-    --secondary-color: #203a43;    /* Couleur intermédiaire */
-    --tertiary-color: #2c5364;     /* Couleur accentuée */
-    --accent-color: #00c6ff;       /* Couleur d'accentuation pour contraste */
+    --primary-color: #0f2027; 
+    --secondary-color: #203a43;
+    --tertiary-color: #2c5364;
+    --accent-color: #00c6ff;
     --text-light: #ffffff;
     --text-dark: #b0c4de;
 }
 
+/* Custom du text d'intro qui défile. */
+#intro-text h1 {
+    display: block;
+    word-break: break-word;         /* Permet de couper le mot pour éviter le débordement. */
+    white-space: normal;            /* Permet le retour à la ligne. */
+    overflow-wrap: break-word;      /* Permet de gérer le retour à la ligne pour le texte. */
+    width: 100%;                    /* S'assure que l'élément occupe toute la largeur disponible. */
+    text-align: center;             /* Centrer le texte. */
+}
+
 /* Sidebar */
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    background: var(--primary-color);
-    color: var(--text-light);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    position: fixed;                                  /* Fixe la sidebar même quand on défile. */
+    top: 0;                                           /* Positionne le haut de la barre latérale au niveau du haut de la fenêtre. */
+    left: 0;                                          /* Positionne la barre latérale à l'extrême gauche de la fenêtre. */
+    width: 250px;                                     /* Définit la largeur de la sidebar. */
+    height: 100vh;                                    /* Définit la hauteur de la sidebar sur toute la fenêtre. */
+    background: var(--primary-color);                 /* Applique la couleur primary-color. */
+    color: var(--text-light);                         /* Applique la couleur de texte text-light. */
+    display: flex;                                    /* Transform en boîte flexible pourle contenu de la sidebar. */
+    flex-direction: column;                           /* Aligne les éléments de haut en bas. */
+    align-items: center;                              /* Centre les éléments. */
+    padding: 80px 1rem 2rem;                          /* Ajoute un espace intérieur : 80px en haut, 1rem à droite et à gauche, 2rem en bas. */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);       /* Ajout d'une ombre sur la droite. */
+    transition: all 0.3s ease;                        /* Ajoute une transition pour les changements de propriété, pour un effet fluide sur 0.3 seconde. */
+    z-index: 1000;                                    /* Définit la priorité d'affichage par rapport aux autres éléments, pour s'assurer qu'elle reste au-dessus. */
+}
+
+/* Styles pour le bouton Hamburger */
+.hamburger {
+    display: none;                          /* Cache le bouton de base (visible pour le responsive). */
+    flex-direction: column;                 /* Aligne les éléments en colonne. */
+    justify-content: space-between;         /* Espace égal entre les barres pour créer le bouton. */
+    width: 30px;                            /* Largeur. */
+    height: 25px;                           /* Hauteur. */
+    cursor: pointer;                        /* Change le curseur au passage de la souris. */
+    position: fixed;                        /* On fixe le bouton. */
+    top: 20px;                              /* Distance entre le haut de la fenêtre et le bouton. */
+    left: 20px;                             /* Distance entre la gauche de la fenêtre et le bouton. */
+    z-index: 1500;                          /* On met le bouton en affichage prioritaire. */
+}
+
+.hamburger div {  
+    width: 100%;                                 /* Les barres prennent toute la largeur définie plus haut. */
+    height: 4px;                                 /* Hauteur de chaque barre du bouton. */
+    background-color: var(--accent-color);       /* Couleur du bouton. */
+    border-radius: 2px;                          /* On arrondit les coins des barres. */
 }
 
 .sidebar h1 {
-    font-size: 1.8rem;
-    margin: 0 0 1rem;
-    text-align: center;
-    color: var(--accent-color);
+    font-size: 1.8rem;                   /* Taille de la police du titre. */
+    margin: 0 0 1rem;                    /* Ajout d'une marge en bas. */
+    text-align: center;                  /* Centre le texte. */
+    color: var(--accent-color);          /* Couleur du titre. */
 }
 
-.sidebar nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 2rem 0 0;
-    width: 100%;
-    text-align: left;
+.sidebar nav ul { 
+    list-style: none;       /* Suppr les puces de la liste pour plus de style. */ 
+    padding: 0;             /* Retire le remplissage par défaut de l'élément. */ 
+    margin: 2rem 0 0;       /* Ajout d'une marge en haut. */ 
+    width: 100%;            /* Prend toute la largeur disponible définie plus haut. */ 
+    text-align: left;       /* Aligne le texte à gauche. */ 
 }
 
 .sidebar nav ul li {
-    margin: 1.5rem 0;
-    display: flex;
-    align-items: center;
+    margin: 1.5rem 0;       /* ajout d'une marge en haut et en bas. */ 
+    display: flex;          /* Transforme en affichage flexbox. */ 
+    align-items: center;    /* Centre le tout. */ 
 }
 
 .sidebar nav a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    color: var(--text-light);                                        /* Couleur du texte. */ 
+    text-decoration: none;                                           /* Supprime le soulignement par défaut des liens. */ 
+    font-weight: bold;                                               /* Met en gras le texte. */ 
+    font-size: 1rem;                                                 /* Taille de la police. */ 
+    display: flex;                                                   /* Affichage en flexbox. */ 
+    align-items: center;                                             /* Centre le tout. */ 
+    gap: 1rem;                                                       /* Ajout d'un espace entre le contenu.*/ 
+    padding: 0.5rem 1rem;                                            /* Ajout d'un padding de 0.5rem en haut et en bas, et de 1rem à gauche et à droite. */ 
+    border-radius: 5px;                                              /* Arrondit les coins. */ 
+    transition: color 0.3s ease, background-color 0.3s ease;         /* Ajout d'une transition lisse pour les changements de couleur et de fond. */ 
 }
 
 .sidebar nav a i {
-    font-size: 1.2rem;
+    font-size: 1.2rem;                   /* Taille des icônes. */ 
+    color: var(--accent-color);          /* Couleur des icônes. */ 
+    transition: color 0.3s ease;         /* Transition pour le changement de couleur. */ 
 }
 
 .sidebar nav a:hover {
-    color: var(--primary-color);
-    background-color: var(--accent-color);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    color: var(--primary-color);                  /* Couleur du texte au passage de la souris. */ 
+    background-color: var(--tertiary-color);      /* Couleur du fond au passage de la souris. */ 
+    transform: scale(1.15);                       /* Agrandit au passage de la souris. */ 
 }
 
 /* Contenu principal */
+main, section { 
+    position: relative;      /* Définit le positionnement. */ 
+    z-index: 0;              /* Niveau de superposition. */
+}
+
 main {
-    margin-left: 270px;
-    padding: 2rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
-    color: var(--text-light);
+    margin-left: 270px;                                                                       /* Espace à gauche pour ne pas cacher la sidebar. */
+    padding: 2rem;                                                                            /* Ajout d'un padding sur tous les côtés pour espacer le contenu. */
+    background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));         /* Ajout d'un dégradé de couleur pour le fond. */
+    color: var(--text-light);                                                                 /* Couleur du texte. */
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: var(--text-light);
-    background-color: var(--primary-color);
+    font-family: Arial, sans-serif;             /* Police du texte. */
+    margin: 0;                                  /* Supprime la marge de la page par défaut.*/
+    padding: 0;                                 /* Suppr le padding par défaut de la page. */
+    color: var(--text-light);                   /* Couleur du texte. */
+    background-color: var(--primary-color);     /* Couleur du background. */
 }
 
 /* Sections */
 section {
-    padding: 4rem 1rem;
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-    margin: 2rem 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0; /* Invisible par défaut */
-    transform: translateY(30px); /* Décalage initial */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    padding: 4rem 1rem;                                             /* Ajout d'un espace intérieur de 4 en haut et en bas et de 1 à gauche et à droite. */
+    background-color: var(--secondary-color);                       /* Couleur du fond. */
+    border-radius: 8px;                                             /* Arrondit les bordures. */
+    margin: 2rem 0;                                                 /* Ajout d'une marge en haut et en bas seulement. */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);                   /* Ajout d'une ombre. */
+    opacity: 0;                                                     /* Rend la section invisible par défaut. */
+    transform: translateY(30px);                                    /* Décale la section vers le bas. */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;     /* Ajout d'une transition progressive pour l'apparition et le déplacement. */
 }
 
 section.visible {
-    opacity: 1; /* Visible quand la classe visible est appliquée */
-    transform: translateY(0); /* Retour à la position initiale */
+    opacity: 1;                    /* Rend la section visible lorsqu'elle a la classe 'visible'. */
+    transform: translateY(0);      /* Replace la seciton à sa position d'origine. */
 }
 
 section h2 {
-    color: var(--accent-color);
-    margin-bottom: 1rem;
+    color: var(--accent-color);     /* Couleur du titre. */
+    margin-bottom: 1rem;            /* Ajout d'un espace en bas des titres. */
 }
 
-/* Section Compétences */
-#skills {
-    padding: 4rem 1rem;
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-    color: var(--text-light);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+/* Styles pour les options du BTS SIO */
+.bts-options {
+    display: flex;                        /* Définit un conteneur flex pour aligner les éléments en ligne. */
+    gap: 2rem;                            /* Ajout d'un espace entre les éléments. */
+    justify-content: space-between;       /* Met un espace égal entre les éléments. */
+    margin-top: 2rem;                     /* Ajout d'un espace au dessus du conteneur. */
 }
 
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
+.bts-options .option {
+    flex: 1 1 48%;                                  /* */
+    padding: 1rem;                                  /* */
+    background-color: var(--tertiary-color);        /* */
+    border-radius: 8px;                             /* */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);     /* */
+    transition: transform 0.3s, box-shadow 0.3s;    /* */
+    text-align: left;                               /* */
+}
+
+.bts-options .option h3 {
+    color: var(--accent-color); /* */
+}
+
+.bts-options .option:hover {
+    transform: scale(1.05) translateY(-5px);         /* */
+    background-color: var(--primary-color);          /* */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);      /* */
+}
+
+/* Section Compétences et Projets */
+.skills-list, .certification-list, .portfolio-gallery {
+    display: flex; /* */
+    flex-wrap: wrap; /* */
     gap: 1.5rem;
     justify-content: center;
 }
 
-.skill {
+.skill, .project {
     flex: 1 1 calc(30% - 1rem);
     padding: 1rem;
     background-color: var(--tertiary-color);
     border-radius: 8px;
     text-align: center;
-    opacity: 0; /* Invisible par défaut */
-    transform: translateY(20px); /* Décalage initial */
+    opacity: 0;
+    transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.3s ease;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.skill.visible {
-    opacity: 1; /* Visible quand la classe visible est appliquée */
-    transform: translateY(0); /* Retour à la position initiale */
+.skill.visible, .project.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.skill:hover {
+.skill:hover, .project:hover {
     background-color: var(--primary-color);
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.skill h3 {
+.skill h3, .project h3 {
     color: var(--accent-color);
 }
 
-.skill p {
+.skill p, .project p {
     color: var(--text-dark);
 }
 
-.skill-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
-    object-fit: contain; /* Pour éviter les déformations d'image */
-}
-
-/* Portfolio Styles */
-#portfolio .portfolio-gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.project {
-    flex: 1 1 calc(33.333% - 2rem);
-    margin: 1rem;
-    padding: 1rem;
-    background-color: var(--secondary-color);
-    text-align: center;
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.project img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-.project h3 {
-    color: var(--accent-color);
-}
-
-.project p {
-    color: var(--text-light);
-}
-
-.project:hover {
-    transform: scale(1.05);
-    background: var(--accent-color);
-    color: var(--primary-color);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+.skill-icon, .project img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
 }
 
 /* Styles pour le texte d'introduction animé */
@@ -204,7 +225,7 @@ section h2 {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background-color: var(--primary-color); /* Arrière-plan principal */
+    background-color: var(--primary-color);
     text-align: center;
     color: var(--text-light);
     margin-bottom: 2rem;
@@ -221,7 +242,6 @@ section h2 {
     animation: gradient-animation 4s ease infinite;
 }
 
-/* Animation pour le dégradé en mouvement */
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
@@ -234,7 +254,7 @@ section h2 {
     }
 }
 
-/* Styles pour le texte d'introduction avec effet de frappe */
+/* Animation pour le texte d'introduction */
 .animated-text {
     font-size: 2.5rem;
     font-weight: bold;
@@ -281,28 +301,21 @@ footer {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.certification-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-}
-
 .certification {
     flex: 1 1 calc(30% - 1rem);
     padding: 1rem;
     background-color: var(--tertiary-color);
     border-radius: 8px;
     text-align: center;
-    opacity: 0; /* Invisible par défaut */
-    transform: translateY(20px); /* Décalage initial */
+    opacity: 0;
+    transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.3s ease;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .certification.visible {
-    opacity: 1; /* Visible quand la classe visible est appliquée */
-    transform: translateY(0); /* Retour à la position initiale */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .certification:hover {
@@ -325,3 +338,153 @@ footer {
     color: var(--accent-color);
     margin-top: 0.5rem;
 }
+
+
+/* Animation spécifique pour le doigt et le texte choisi */
+.chosen-text {
+    display: inline-block;
+    animation: move-up-down 2s ease-in-out infinite;
+}
+
+@keyframes move-up-down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Partie responsive */
+
+/* Pour les écrans de 768px à 1024px */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 250px;
+        padding: 80px 1rem 2rem; 
+    main {
+        margin-left: 220px;
+    }
+    .skills-list, .certification-list, .portfolio-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill, .certification, .project {
+        flex: 1 1 80%;
+    }
+    .bts-options {
+        flex-direction: column; /* Empile les options verticalement */
+        gap: 1.5rem; /* Ajoute un espace entre les boxes */
+    }
+    .bts-options .option {
+        flex: 1 1 100%; /* Prend toute la largeur disponible */
+    }
+    #intro-text {
+        font-size: 2rem; /* Réduit la taille de la police */
+        max-width: 95%; /* Limite la largeur de l'élément */
+        margin: 0 auto; /* Centre l'élément */
+        word-wrap: break-word; /* Coupe le texte pour éviter le débordement */
+        white-space: normal; /* Permet au texte de passer à la ligne */
+    }
+}
+
+/* Pour les écrans de 480px à 768px */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        padding: 80px 1rem 2rem; 
+    }
+    #intro-text {
+        font-size: 1.5rem; /* Réduit la taille de la police */
+        max-width: 90%; /* Limite encore la largeur de l'élément */
+        margin: 0 auto; /* Centre l'élément */
+        word-wrap: break-word; /* Coupe le texte pour éviter le débordement */
+        white-space: normal; /* Permet au texte de passer à la ligne */
+    }
+    main {
+        margin-left: 190px;
+    }
+    .sidebar h1 {
+        font-size: 1.5rem;
+    }
+    .sidebar nav a {
+        font-size: 0.9rem;
+    }
+    .skill, .certification, .project {
+        flex: 1 1 90%;
+    }
+    .animated-text {
+        font-size: 2rem;
+    }
+    .bts-options {
+        flex-direction: column; 
+        gap: 1.5rem;
+    }
+    .bts-options .option {
+        flex: 1 1 100%;
+    }
+}
+
+/* Pour les écrans de moins de 480px */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 220px;
+        padding: 80px 0.3rem 2rem; 
+    }
+    #intro-text {
+        font-size: 1.2rem; /* Réduit encore plus la taille de la police */
+        max-width: 90%; /* Assure que l'élément reste à l'intérieur de l'écran */
+        margin: 0 auto; /* Centre l'élément */
+        word-wrap: break-word; /* Coupe le texte pour éviter le débordement */
+        white-space: normal; /* Permet au texte de passer à la ligne */
+    }
+    main {
+        margin-left: 160px;
+        padding: 1rem;
+    }
+    .sidebar h1 {
+        font-size: 1.2rem;
+    }
+    .sidebar nav a {
+        font-size: 0.8rem;
+    }
+    .skills-list, .certification-list, .portfolio-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill, .certification, .project {
+        flex: 1 1 100%;
+    }
+    .animated-text {
+        font-size: 1.5rem;
+    }
+    section {
+        padding: 2rem 1rem;
+    }
+    .bts-options {
+        flex-direction: column; 
+        gap: 1rem; 
+    }
+    .bts-options .option {
+        flex: 1 1 100%;
+    }
+}
+
+/* Cacher le menu pour les petites résolutions */
+@media (max-width: 1024px) {
+    .hamburger {
+        display: flex;
+    }
+    .sidebar {
+        transform: translateX(-100%); /* Cache le menu hors de l'écran */
+        transition: transform 0.3s ease;
+    }
+    .sidebar.open {
+        transform: translateX(0); /* Fait réapparaître le menu */
+    }
+    main {
+        margin-left: 0; /* Ajuste la marge quand le menu est caché */
+    }
+}}
+
