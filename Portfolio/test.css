@@ -443,6 +443,14 @@ footer {
         word-wrap: break-word;            /* Coupe le texte pour éviter le débordement */
         white-space: normal;              /* Permet au texte de passer à la ligne */
     }
+    .parcours-container {
+        flex-direction: column; /* Affiche les boîtes en colonne */
+        gap: 1.5rem; /* Ajuste l'espace entre les boîtes */
+    }
+
+    .parcours {
+        flex: 1 1 100%; /* Les boîtes prennent toute la largeur disponible */
+    }
 }
 
 /* Pour les écrans de 480px à 768px */
@@ -479,6 +487,15 @@ footer {
     }
     .bts-options .option {
         flex: 1 1 100%;             /* Les options prennent 100% de la largeur disponible. */
+    }
+    .parcours-container {
+        flex-direction: column; /* Affiche les boîtes en colonne */
+        gap: 1rem; /* Réduit l'espace entre les boîtes */
+    }
+
+    .parcours {
+        padding: 1rem; /* Réduit le padding pour économiser de l'espace */
+        flex: 1 1 100%; /* Les boîtes prennent toute la largeur */
     }
 }
 
@@ -524,6 +541,23 @@ footer {
     }
     .bts-options .option {
         flex: 1 1 100%;             /* Les options prennent 100% de la largeur disponible. */
+    }
+    .parcours-container {
+        flex-direction: column; /* Affiche les boîtes en colonne */
+        gap: 0.5rem; /* Espace réduit entre les boîtes */
+    }
+
+    .parcours {
+        padding: 0.8rem; /* Diminue le padding pour un affichage compact */
+        flex: 1 1 100%; /* Les boîtes occupent toute la largeur */
+    }
+
+    .parcours h3 {
+        font-size: 1.2rem; /* Réduit la taille du titre */
+    }
+
+    .parcours .date {
+        font-size: 0.8rem; /* Diminue la taille des dates */
     }
 }
 
