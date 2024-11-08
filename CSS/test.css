@@ -145,6 +145,57 @@ section h2 {
     color: var(--accent-color);     /* Couleur du titre. */
     margin-bottom: 1rem;            /* Ajout d'un espace en bas des titres. */
 }
+/* Conteneur pour les deux parcours */
+.parcours-container {
+    display: flex;
+    gap: 2rem; /* Espace entre les deux boîtes */
+    justify-content: space-between; /* Distribution égale */
+    margin-top: 2rem; /* Espacement supérieur */
+}
+
+/* Style commun pour les boîtes de parcours */
+.parcours {
+    flex: 1 1 48%; /* Prend 48% de l'espace, ajustable selon besoin */
+    padding: 1.5rem;
+    background-color: var(--tertiary-color);
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: var(--text-light);
+}
+
+/* Effet de survol pour les boîtes */
+.parcours:hover {
+    transform: scale(1.05) translateY(-5px);
+    background-color: var(--primary-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Style des titres */
+.parcours h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Style des listes */
+.parcours ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style des éléments de liste */
+.parcours li {
+    margin-bottom: 1rem; /* Espacement entre chaque élément */
+}
+
+/* Style des dates */
+.parcours .date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-top: 0.5rem; /* Espacement entre le texte et la date */
+}
 
 /* Styles pour les options du BTS SIO */
 .bts-options {

@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {                 // A
     const projects = document.querySelectorAll('.project');                 // Sélectionne tous les éléments ayant la classe .project.
     const skills = document.querySelectorAll('.skill');                     // Sélectionne tous les éléments ayant la classe .skill.
     const certifications = document.querySelectorAll('.certification');     // Sélectionne tous les éléments ayant la classe .certification.
-    const portfolio = document.querySelectorAll('.project');                // Sélectionne tous les éléments .project (duplicata de la ligne 'projects').
+    const portfolio = document.querySelectorAll('.project');  
+    const parcours = document.querySelectorAll('.parcours');             // Sélectionne tous les éléments .project (duplicata de la ligne 'projects').
     const typingText = document.getElementById('typing-text');              // Sélectionne l'élément avec l'ID 'typing-text'.
     const chosenText = document.querySelector('.chosen-text');              // Sélectionne l'élément avec la classe .chosen-text pour vérifier son existence.
     const fingerIcon = document.querySelector('.finger-icon');              // Sélectionne l'élément avec la classe .finger-icon pour vérifier son existence.
@@ -43,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {                 // A
     sections.forEach(section => observer.observe(section));                         // Observe chaque section.
     skills.forEach(skill => observer.observe(skill));                               // Observe chaque compétence.
     certifications.forEach(certification => observer.observe(certification));       // Observe chaque certification.
-    portfolio.forEach(project => observer.observe(project));                        // Observe chaque projet.
+    portfolio.forEach(project => observer.observe(project));    
+    parcours.forEach(parcours => observer.observe(parcours));                    // Observe chaque projet.
 
 
     // Effet de zoom sur les projets
