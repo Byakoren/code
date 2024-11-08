@@ -155,203 +155,205 @@ section h2 {
 }
 
 .bts-options .option {
-    flex: 1 1 48%;                                  /* */
-    padding: 1rem;                                  /* */
-    background-color: var(--tertiary-color);        /* */
-    border-radius: 8px;                             /* */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);     /* */
-    transition: transform 0.3s, box-shadow 0.3s;    /* */
-    text-align: left;                               /* */
+    flex: 1 1 48%;                                  /* Définit une flexibilité pour que chaque option prenne 48% de l'espace disponible. */
+    padding: 1rem;                                  /* Ajoute un espace intérieur de 1rem. */
+    background-color: var(--tertiary-color);        /* Couleur du fond. */
+    border-radius: 8px;                             /* Arrondit les coins. */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);     /* Ajout d'une ombre. */
+    transition: transform 0.3s, box-shadow 0.3s;    /* Ajout d'une transition pour le changement de transformation et de l'ombre. */
+    text-align: left;                               /* Aligne le texte à gauche. */
 }
 
 .bts-options .option h3 {
-    color: var(--accent-color); /* */
+    color: var(--accent-color);      /* Couleur du titre. */
 }
 
+/* Style au passage de la souris  */
 .bts-options .option:hover {
-    transform: scale(1.05) translateY(-5px);         /* */
-    background-color: var(--primary-color);          /* */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);      /* */
+    transform: scale(1.05) translateY(-5px);         /* Aggrandit avec scale et le déplace vers le haut au survol. */
+    background-color: var(--primary-color);          /* Couleur du fond. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);      /* Ajout d'une ombre. */
 }
 
 /* Section Compétences et Projets */
 .skills-list, .certification-list, .portfolio-gallery {
-    display: flex; /* */
-    flex-wrap: wrap; /* */
-    gap: 1.5rem;
-    justify-content: center;
+    display: flex;                                          /* Utilise le modèfle flebox.*/
+    flex-wrap: wrap;                                        /* Permet de passer à la ligne si l'espace dispo est insuffisant. */
+    gap: 1.5rem;                                            /* Ajout d'un espace entre les éléments. */
+    justify-content: center;                                /* Centre les éléments dans le conteneur. */
 }
 
 .skill, .project {
-    flex: 1 1 calc(30% - 1rem);
-    padding: 1rem;
-    background-color: var(--tertiary-color);
-    border-radius: 8px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    flex: 1 1 calc(30% - 1rem);                                                                 /* Chaque élément occupe 30% de la largeur disponible moins 1rem. */
+    padding: 1rem;                                                                              /* Ajout d'un espace intérieur. */
+    background-color: var(--tertiary-color);                                                    /* Couleur du fond. */
+    border-radius: 8px;                                                                         /* Arrondit les coins. */
+    text-align: center;                                                                         /* Centre le texte. */
+    opacity: 0;                                                                                 /* Rend l'élément invisible par défaut. */
+    transform: translateY(20px);                                                                /* Décale l'élément vers le bas. */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.3s ease;     /* Transition pour l'opacité, la transformation et la couleur du fond. */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);                                               /* Ajout d'une ombre.*/
 }
 
 .skill.visible, .project.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1;                      /* On le rend visible si on lui met la classe 'visible'. */
+    transform: translateY(0);        /* Ramène l'élément à sa position initiale. */
 }
 
+/* Style au passage de la souris  */
 .skill:hover, .project:hover {
-    background-color: var(--primary-color);
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: var(--primary-color);          /* Couleur du fond. */
+    transform: scale(1.05) translateY(-5px);         /* Agrandit et le déplace vers le haut lors du survol. */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);    /* Ajout d'une ombre. */
 }
 
 .skill h3, .project h3 {
-    color: var(--accent-color);
+    color: var(--accent-color);      /* Couleur du titre. */
 }
 
 .skill p, .project p {
-    color: var(--text-dark);
+    color: var(--text-dark);         /* Couleur du texte. */
 }
 
 .skill-icon, .project img {
-    max-width: 100px;
-    max-height: 100px;
-    object-fit: contain;
+    max-width: 100px;             /* Limite la largeur max de l'image. */
+    max-height: 100px;            /* Limite la hauteur max de l'image. */
+    object-fit: contain;          /* Adapte l'image pour qu'elle rentre dans les dimensions spécifiées sans être déformée. */
 }
 
 /* Styles pour le texte d'introduction animé */
 #intro-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background-color: var(--primary-color);
-    text-align: center;
-    color: var(--text-light);
-    margin-bottom: 2rem;
+    display: flex;                               /* Centre le contenu avec le modèle flexbox. */
+    justify-content: center;                     /* Centre le contenu horizontalement. */
+    align-items: center;                         /* Centre le contenu verticalement. */
+    padding: 2rem;                               /* Ajout d'un espace intérieur. */
+    background-color: var(--primary-color);      /* Couleur du fond. */
+    text-align: center;                          /* Centre le texte. */
+    color: var(--text-light);                    /* Couleur du texte. */
+    margin-bottom: 2rem;                         /* Ajout d'une marge en bas. */
 }
 
 .animated-text {
-    font-size: 2.5rem;
-    font-weight: bold;
-    background: linear-gradient(90deg, var(--accent-color), var(--text-light), var(--accent-color));
-    background-size: 200% 200%;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: gradient-animation 4s ease infinite;
+    font-size: 2.5rem;                                                                               /* Taille de la police.*/
+    font-weight: bold;                                                                               /* Texte en gras. */
+    background: linear-gradient(90deg, var(--accent-color), var(--text-light), var(--accent-color)); /* dégradé de couleur dans le fond. */
+    background-size: 200% 200%;                                                                      /* Double la taille du fond pour créer du mouvement. */
+    color: transparent;                                                                              /* Rend le texte transparent pour affiche le fond. */
+    -webkit-background-clip: text;                                                                   /* Découpe l'arrière-plan en fonction de forme du texte. (pour webkit) */
+    background-clip: text;                                                                           /* Découpe l'arrière-plan en fonction de forme du texte. */
+    animation: gradient-animation 4s ease infinite;                                                  /* Animation continue avec une durée de 4s et une courbe de transition lisse. */
 }
 
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
+@keyframes gradient-animation {         /* Définit une animation appelée `gradient-animation`. */
+    0% {                                /* Début de l'animation. */
+        background-position: 0% 50%;    /* La position de départ de l'arrière-plan est à 0% horizontalement et 50% verticalement. */
     }
-    50% {
-        background-position: 100% 50%;
+    50% {                               /* Milieu de l'animation. */
+        background-position: 100% 50%;  /* L'arrière-plan se déplace pour atteindre 100% horizontalement et 50% verticalement. */
     }
-    100% {
-        background-position: 0% 50%;
+    100% {                              /* Fin de l'animation. */
+        background-position: 0% 50%;    /* L'arrière-plan revient à la position de départ, soit 0% horizontalement et 50% verticalement. */
     }
 }
 
 /* Animation pour le texte d'introduction */
 .animated-text {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--accent-color);
-    position: relative;
-    white-space: nowrap;
-    overflow: hidden;
-    padding-right: 5px;
-    animation: blink-cursor 0.7s step-end infinite;
+    font-size: 2.5rem;                                    /* Taille de la police. */
+    font-weight: bold;                                    /* Police en gras. */
+    color: var(--accent-color);                           /* Couleur du texte. */
+    position: relative;                                   /* Définit une position relative pour permettre des positionnements internes. */
+    white-space: nowrap;                                  /* Empêche le texte de passer à la ligne. */
+    overflow: hidden;                                     /* Cache tout le contenu qui dépasse la largeur de l'élément. */
+    padding-right: 5px;                                   /* Ajout d'un espace à droite. */
 }
 
 /* Boutons et liens */
 button, input[type="submit"] {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    border: none;
-    padding: 0.8rem 1.2rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--accent-color);                     /* Couleur du fond. */
+    color: var(--primary-color);                               /* Couleur du texte. */
+    border: none;                                              /* Retire la bordure par défaut. */
+    padding: 0.8rem 1.2rem;                                    /* Ajout d'un espace en haut et bas de 0.8 et droite et gauche de 1.2. */
+    border-radius: 30px;                                       /* Arrondit les coins des boutons. */
+    cursor: pointer;                                           /* Change le curseur en pointeur lorqu'on survole l'élément. */
+    transition: background-color 0.3s ease, color 0.3s ease;   /* Ajout d'une transition fluide pour le changement de couleur et de fond.*/
 }
 
 button:hover, input[type="submit"]:hover {
-    background-color: var(--tertiary-color);
-    color: var(--text-light);
+    background-color: var(--tertiary-color);     /* Couleur du fond. */
+    color: var(--text-light);                    /* Couleur du texte. */
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    font-size: 0.9rem;
-    border-top: 4px solid var(--tertiary-color);
+    text-align: center;                            /* Centre le texte. */
+    padding: 2rem 1rem;                            /* Ajout d'un espace de 2rem en haut et en bas et de 1rem à droite et gauche. */
+    background-color: var(--primary-color);        /* Couleur du fond. */
+    color: var(--text-light);                      /* Couleur du texte. */
+    font-size: 0.9rem;                             /* Taille de la police. */
+    border-top: 4px solid var(--tertiary-color);   /* Ajout d'une bordure supérieure. d'une autre couleur. */
+    border-radius: 8px;                            /* Arrondit les coins. */
 }
 
 /* Section Certifications */
 #certifications {
-    padding: 4rem 1rem;
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-    color: var(--text-light);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 4rem 1rem;                                  /* Ajout d'un espace partout. */
+    background-color: var(--secondary-color);            /* Couleur du fond. */
+    border-radius: 8px;                                  /* Arrondit les coins. */
+    color: var(--text-light);                            /* Couleur du texte. */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);        /* Ajout d'une ombre. */
 }
 
 .certification {
-    flex: 1 1 calc(30% - 1rem);
-    padding: 1rem;
-    background-color: var(--tertiary-color);
-    border-radius: 8px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    flex: 1 1 calc(30% - 1rem);                                                              /* Permet à l'élément de s'étendre sur 30% de l'espace moins 1rem. */
+    padding: 1rem;                                                                           /* Ajout d'un espace interne. */
+    background-color: var(--tertiary-color);                                                 /* Couleur du fond. */
+    border-radius: 8px;                                                                      /* Arrondit les coins. */
+    text-align: center;                                                                      /* Centre le texte.*/
+    opacity: 0;                                                                              /* Rend l'élément invisible par défaut. */
+    transform: translateY(20px);                                                             /* Décale l'élément vers le bas. */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.3s ease;  /* Ajoute des transitions pour les changements de visibilité, de position et de fond. */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);                                            /* Ajout d'une ombre. */
 }
 
 .certification.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1;                        /* Le rend visible avec la classe 'visible'. */
+    transform: translateY(0);          /* Remet l'élément à sa position d'origine. */
 }
 
 .certification:hover {
-    background-color: var(--primary-color);
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: var(--primary-color);             /* Couleur du fond. */
+    transform: scale(1.05) translateY(-5px);            /* Agrandit légèrement l'élément et le déplace de 5px vers le haut pour un effet de survol. */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);       /* Ajout d'une combre. */
 }
 
 .certification h3 {
-    color: var(--accent-color);
+    color: var(--accent-color);     /* Couleur du titre. */
 }
 
 .certification p {
-    color: var(--text-dark);
+    color: var(--text-dark);     /* Couleur du texte. */
 }
 
 .certification .date {
-    display: block;
-    font-size: 0.85rem;
-    color: var(--accent-color);
-    margin-top: 0.5rem;
+    display: block;                 /* Force l'élément à occuper toute la largeur disponible, l'affichant sur une ligne distincte. */
+    font-size: 0.85rem;             /* Taille de la police. */
+    color: var(--accent-color);     /* Couleur du texte. */
+    margin-top: 0.5rem;             /* Ajout d'une marge en haut.*/
 }
 
 
 /* Animation spécifique pour le doigt et le texte choisi */
 .chosen-text {
-    display: inline-block;
-    animation: move-up-down 2s ease-in-out infinite;
+    display: inline-block;                               /* Affiche l'élément en ligne tout en permettant d'utiliser les propriétés de taille et de positionnement*/
+    animation: move-up-down 2s ease-in-out infinite;     /* Applique une animation qui fait bouger l'élément de haut en bas, avec une durée de 2 secondes, une accélération/décélération douce et un cycle répété indéfiniment. */
 }
 
-@keyframes move-up-down {
-    0%, 100% {
-        transform: translateY(0);
+@keyframes move-up-down {               
+    0%, 100% {                          
+        transform: translateY(0);       /* À 0% et 100% de l'animation, l'élément est à sa position initiale*/
     }
-    50% {
-        transform: translateY(-5px);
+    50% {                               
+        transform: translateY(-5px);    /* À 50% de l'animation, l'élément est déplacé vers le haut de 5 pixels*/
     }
 }
 
@@ -359,132 +361,132 @@ footer {
 /* Partie responsive */
 
 /* Pour les écrans de 768px à 1024px */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) {                 /* Applique les styles suivants aux écrans dont la largeur est de 1024 pixels ou moins.*/
     .sidebar {
-        width: 250px;
-        padding: 80px 1rem 2rem; 
+        width: 250px;                        /* Ajuste la largeur de la sidebar. */
+        padding: 80px 1rem 2rem;             /* Définit le remplissage de la sidebar. */
     main {
-        margin-left: 220px;
+        margin-left: 220px;                  /* Réduit la marge à gauche du contenu principal pour correspondre à la largeur ajustée de la sidebar. */
     }
     .skills-list, .certification-list, .portfolio-gallery {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column;                                     /* Change la direction des éléments en colonnes. */
+        align-items: center;                                        /* Centre les éléments. */
     }
     .skill, .certification, .project {
-        flex: 1 1 80%;
+        flex: 1 1 80%;                     /* Ajuste la taille des éléments pour qu'ils occupent 80% de la largeur disponible. */
     }
     .bts-options {
-        flex-direction: column; /* Empile les options verticalement */
-        gap: 1.5rem; /* Ajoute un espace entre les boxes */
+        flex-direction: column;           /* Empile les options (slam et sisr) verticalement */
+        gap: 1.5rem;                      /* Ajoute un espace entre les boxes */
     }
     .bts-options .option {
-        flex: 1 1 100%; /* Prend toute la largeur disponible */
+        flex: 1 1 100%;                   /* Prend toute la largeur disponible */
     }
     #intro-text {
-        font-size: 2rem; /* Réduit la taille de la police */
-        max-width: 95%; /* Limite la largeur de l'élément */
-        margin: 0 auto; /* Centre l'élément */
-        word-wrap: break-word; /* Coupe le texte pour éviter le débordement */
-        white-space: normal; /* Permet au texte de passer à la ligne */
+        font-size: 2rem;                  /* Réduit la taille de la police */
+        max-width: 95%;                   /* Limite la largeur de l'élément */
+        margin: 0 auto;                   /* Centre l'élément */
+        word-wrap: break-word;            /* Coupe le texte pour éviter le débordement */
+        white-space: normal;              /* Permet au texte de passer à la ligne */
     }
 }
 
 /* Pour les écrans de 480px à 768px */
-@media (max-width: 768px) {
+@media (max-width: 768px) {              /* Applique les styles suivants aux écrans dont la largeur est de 768 pixels ou moins*/
     .sidebar {
-        width: 250px;
-        padding: 80px 1rem 2rem; 
+        width: 250px;                    /* Ajuste la largeur de la sidebar. */
+        padding: 80px 1rem 2rem;         /* Définit le remplissage de la sidebar. */
     }
     #intro-text {
-        font-size: 1.5rem; /* Réduit la taille de la police */
-        max-width: 90%; /* Limite encore la largeur de l'élément */
-        margin: 0 auto; /* Centre l'élément */
-        word-wrap: break-word; /* Coupe le texte pour éviter le débordement */
-        white-space: normal; /* Permet au texte de passer à la ligne */
+        font-size: 1.5rem;          /* Réduit la taille de la police */
+        max-width: 90%;             /* Limite encore la largeur de l'élément */
+        margin: 0 auto;             /* Centre l'élément */
+        word-wrap: break-word;      /* Coupe le texte pour éviter le débordement */
+        white-space: normal;        /* Permet au texte de passer à la ligne */
     }
     main {
-        margin-left: 190px;
+        margin-left: 190px;     /* Réduit la marge à gauche du contenu principal pour correspondre à la largeur ajustée de la sidebar. */
     }
     .sidebar h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem;      /* Taille de la police du titre. */
     }
     .sidebar nav a {
-        font-size: 0.9rem;
+        font-size: 0.9rem;      /* Taille de la police des liens. */
     }
     .skill, .certification, .project {
-        flex: 1 1 90%;
+        flex: 1 1 90%;                      /* Ajuste la taille des éléments pour qu'ils occupent 90% de la largeur disponible*/
     }
     .animated-text {
-        font-size: 2rem;
+        font-size: 2rem;            /* Taille de la police. */
     }
     .bts-options {
-        flex-direction: column; 
-        gap: 1.5rem;
+        flex-direction: column;     /* Modifie la disposition des options du BTS pour qu'elles s'affichent verticalement. */
+        gap: 1.5rem;                /* Ajout d'un espace entre les options. */
     }
     .bts-options .option {
-        flex: 1 1 100%;
+        flex: 1 1 100%;             /* Les options prennent 100% de la largeur disponible. */
     }
 }
 
 /* Pour les écrans de moins de 480px */
-@media (max-width: 480px) {
+@media (max-width: 480px) {                 /* Applique les styles suivants aux écrans dont la largeur est de 480 pixels ou moins*/
     .sidebar {
-        width: 220px;
-        padding: 80px 0.3rem 2rem; 
+        width: 220px;                   /* Ajuste la largeur de la sidebar. */
+        padding: 80px 0.3rem 2rem;      /* Définit le remplissage de la sidebar. */
     }
     #intro-text {
-        font-size: 1.2rem; /* Réduit encore plus la taille de la police */
-        max-width: 90%; /* Assure que l'élément reste à l'intérieur de l'écran */
-        margin: 0 auto; /* Centre l'élément */
-        word-wrap: break-word; /* Coupe le texte pour éviter le débordement */
-        white-space: normal; /* Permet au texte de passer à la ligne */
+        font-size: 1.2rem;          /* Réduit encore plus la taille de la police */
+        max-width: 90%;             /* Assure que l'élément reste à l'intérieur de l'écran */
+        margin: 0 auto;             /* Centre l'élément */
+        word-wrap: break-word;      /* Coupe le texte pour éviter le débordement */
+        white-space: normal;        /* Permet au texte de passer à la ligne */
     }
     main {
-        margin-left: 160px;
-        padding: 1rem;
+        margin-left: 160px;         /* Réduit la marge à gauche du contenu principal pour correspondre à la largeur ajustée de la sidebar. */
+        padding: 1rem;              /* Réduit le remplissage du contenu principal. */
     }
     .sidebar h1 {
-        font-size: 1.2rem;
+        font-size: 1.2rem;          /* Taille de la police du titre. */
     }
     .sidebar nav a {
-        font-size: 0.8rem;
+        font-size: 0.8rem;          /* Taille de la police des liens. */
     }
     .skills-list, .certification-list, .portfolio-gallery {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column;                                 /* Affiche les éléments de ces sections en colonne. */
+        align-items: center;                                    /* Centre les éléments. */
     }
     .skill, .certification, .project {
-        flex: 1 1 100%;
+        flex: 1 1 100%;                     /* Chaque élément prend 100% de la largeur disponible */
     }
     .animated-text {
-        font-size: 1.5rem;
+        font-size: 1.5rem;          /* Taille de la police.*/
     }
     section {
-        padding: 2rem 1rem;
+        padding: 2rem 1rem;         /* Réduit le remplissage des sections pour s'adapter aux petits écrans. */
     }
     .bts-options {
-        flex-direction: column; 
-        gap: 1rem; 
+        flex-direction: column;     /* Modifie la disposition des options du BTS pour qu'elles s'affichent verticalement. */
+        gap: 1rem;                  /* Ajout d'un espace entre les options. */
     }
     .bts-options .option {
-        flex: 1 1 100%;
+        flex: 1 1 100%;             /* Les options prennent 100% de la largeur disponible. */
     }
 }
 
 /* Cacher le menu pour les petites résolutions */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) {                        /* Applique les styles suivants aux écrans dont la largeur est de 1024 pixels ou moins. */
     .hamburger {
-        display: flex;
+        display: flex;                              /* Affiche le bouton hamburger pour activer/désactiver le menu. */
     }
     .sidebar {
-        transform: translateX(-100%); /* Cache le menu hors de l'écran */
-        transition: transform 0.3s ease;
+        transform: translateX(-100%);               /* Cache le menu hors de l'écran. */
+        transition: transform 0.3s ease;            /* Applique une transition fluide lors de l'affichage ou du masquage de la sidebar. */ 
     }
     .sidebar.open {
-        transform: translateX(0); /* Fait réapparaître le menu */
+        transform: translateX(0);                   /* Fait réapparaître le menu. */
     }
     main {
-        margin-left: 0; /* Ajuste la marge quand le menu est caché */
+        margin-left: 0;                             /* Ajuste la marge quand le menu est caché. */
     }
 }}
 
