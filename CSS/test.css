@@ -145,57 +145,60 @@ section h2 {
     color: var(--accent-color);     /* Couleur du titre. */
     margin-bottom: 1rem;            /* Ajout d'un espace en bas des titres. */
 }
+
+
 /* Conteneur pour les deux parcours */
 .parcours-container {
-    display: flex;
-    gap: 2rem; /* Espace entre les deux boîtes */
-    justify-content: space-between; /* Distribution égale */
-    margin-top: 2rem; /* Espacement supérieur */
+    display: flex;                      /* Utilise le modèle flexbox pour afficher les boîtes en ligne. */
+    gap: 2rem;                          /* Espace de 2rem entre les deux boîtes. */
+    justify-content: space-between;     /* Espace égal entre les éléments, alignés aux extrémités. */
+    margin-top: 2rem;                   /* Ajoute un espace de 2rem en haut du conteneur. */
 }
 
 /* Style commun pour les boîtes de parcours */
 .parcours {
-    flex: 1 1 48%; /* Prend 48% de l'espace, ajustable selon besoin */
-    padding: 1.5rem;
-    background-color: var(--tertiary-color);
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    color: var(--text-light);
+    flex: 1 1 48%;                                  /* Les boîtes prennent 48% de l'espace disponible et peuvent s'adapter si besoin. */
+    padding: 1.5rem;                                /* Ajoute un espace interne de 1.5rem autour du contenu. */
+    background-color: var(--tertiary-color);        /* Couleur de fond définie par la variable CSS. */
+    border-radius: 8px;                             /* Arrondit les coins des boîtes. */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);   /* Ajoute une ombre légère aux boîtes. */
+    transition: transform 0.3s, box-shadow 0.3s;    /* Transition fluide pour l'effet de survol (0.3s). */
+    color: var(--text-light);                       /* Couleur du texte définie par la variable CSS. */
 }
 
 /* Effet de survol pour les boîtes */
 .parcours:hover {
-    transform: scale(1.05) translateY(-5px);
-    background-color: var(--primary-color);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05) translateY(-5px);            /* Agrandit la boîte de 5% et la déplace légèrement vers le haut. */
+    background-color: var(--primary-color);             /* Change la couleur de fond lors du survol. */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);       /* Accentue l'ombre lors du survol. */
 }
 
 /* Style des titres */
 .parcours h3 {
-    color: var(--accent-color);
-    margin-bottom: 1rem;
+    color: var(--accent-color);     /* Applique la couleur d'accentuation au titre. */
+    margin-bottom: 1rem;            /* Ajoute un espace de 1rem sous le titre. */
 }
 
 /* Style des listes */
 .parcours ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none;           /* Supprime les puces par défaut des listes. */
+    padding: 0;                 /* Supprime le rembourrage interne de la liste. */
+    margin: 0;                  /* Supprime la marge externe de la liste. */
 }
 
 /* Style des éléments de liste */
 .parcours li {
-    margin-bottom: 1rem; /* Espacement entre chaque élément */
+    margin-bottom: 1rem;        /* Ajoute un espace de 1rem entre chaque élément de la liste. */
 }
 
 /* Style des dates */
 .parcours .date {
-    display: block;
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    margin-top: 0.5rem; /* Espacement entre le texte et la date */
+    display: block;                 /* Affiche la date sur une ligne distincte. */
+    font-size: 0.9rem;              /* Taille de la police réduite pour la date. */
+    color: var(--accent-color);     /* Applique la couleur d'accentuation à la date. */
+    margin-top: 0.5rem;             /* Ajoute un espace de 0.5rem entre le texte et la date. */
 }
+
 
 /* Styles pour les options du BTS SIO */
 .bts-options {
