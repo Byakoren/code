@@ -197,6 +197,7 @@ section h2 {
     font-size: 0.9rem;              /* Taille de la police réduite pour la date. */
     color: var(--accent-color);     /* Applique la couleur d'accentuation à la date. */
     margin-top: 0.5rem;             /* Ajoute un espace de 0.5rem entre le texte et la date. */
+    margin-left: 1rem;              /* Décaler un petit peu le text sur la droite */
 }
 
 
