@@ -147,24 +147,35 @@ section h2 {
 }
 
 
-/* Conteneur pour les deux parcours */
+/* Conteneur pour les parcours */
 .parcours-container {
-    display: flex;                      /* Utilise le modèle flexbox pour afficher les boîtes en ligne. */
-    gap: 2rem;                          /* Espace de 2rem entre les deux boîtes. */
-    justify-content: space-between;     /* Espace égal entre les éléments, alignés aux extrémités. */
-    margin-top: 2rem;                   /* Ajoute un espace de 2rem en haut du conteneur. */
+    display: grid;                          /* Utiliser grid au lieu de flex. */
+    grid-template-columns: 1fr 1fr;         /* Crée deux colonnes de même taille. */
+    gap: 2rem;                              /* Ajout d'un espace entre les éléments. */    
+    margin-top: 2rem;                       /* Ajout d'une marge en haut. */    
 }
 
 /* Style commun pour les boîtes de parcours */
 .parcours {
-    flex: 1 1 48%;                                  /* Les boîtes prennent 48% de l'espace disponible et peuvent s'adapter si besoin. */
-    padding: 1.5rem;                                /* Ajoute un espace interne de 1.5rem autour du contenu. */
-    background-color: var(--tertiary-color);        /* Couleur de fond définie par la variable CSS. */
-    border-radius: 8px;                             /* Arrondit les coins des boîtes. */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);   /* Ajoute une ombre légère aux boîtes. */
-    transition: transform 0.3s, box-shadow 0.3s;    /* Transition fluide pour l'effet de survol (0.3s). */
-    color: var(--text-light);                       /* Couleur du texte définie par la variable CSS. */
+    padding: 1.5rem;                                 /* Ajout d'un espace intérieur autour du contenu de la box. */
+    background-color: var(--tertiary-color);         /* Couleur du fond. */
+    border-radius: 8px;                              /* Arrondit les coins. */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);    /* Ajout d'une ombre. */ 
+    transition: transform 0.3s, box-shadow 0.3s;     /* Ajout d'une transition pour les transformations et les ombres. */
+    color: var(--text-light);                        /* Couleur du texte. */ 
 }
+
+#stage {
+    grid-column: 1 / -1;           /* Permet de passer la box à la ligne.*/
+    text-align: center;            /* Centre le texte horizontalement */
+}
+
+/* Centre également les éléments de la liste dans la section stage */
+#stage ul {
+    list-style: none;              /* Enlève les puces de la liste */
+    padding-left: 0;               /* Enlève le padding par défaut de la liste */
+}
+
 
 /* Effet de survol pour les boîtes */
 .parcours:hover {
