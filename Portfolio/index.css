@@ -162,7 +162,7 @@ section h2 {
     border-radius: 8px;                              /* Arrondit les coins. */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);    /* Ajout d'une ombre. */ 
     transition: transform 0.3s, box-shadow 0.3s;     /* Ajout d'une transition pour les transformations et les ombres. */
-    color: var(--text-light);                        /* Couleur du texte. */ 
+    color: var(--text-light);                        /* Couleur du texte.*/ 
 }
 
 #stage {
@@ -573,20 +573,59 @@ footer {
     }
 }
 
-/* Cacher le menu pour les petites résolutions */
-@media (max-width: 1024px) {                        /* Applique les styles suivants aux écrans dont la largeur est de 1024 pixels ou moins. */
+/* Cette règle s'applique aux écrans dont la largeur est inférieure ou égale à 1024px (tablettes et mobiles) */
+@media (max-width: 1024px) {
+    /* Section navigation */
     .hamburger {
-        display: flex;                              /* Affiche le bouton hamburger pour activer/désactiver le menu. */
+        display: flex;                  /* Affiche le bouton hamburger qui était caché en version desktop. */
     }
     .sidebar {
-        transform: translateX(-100%);               /* Cache le menu hors de l'écran. */
-        transition: transform 0.3s ease;            /* Applique une transition fluide lors de l'affichage ou du masquage de la sidebar. */ 
+        transform: translateX(-100%);    /* Déplace la sidebar complètement hors de l'écran vers la gauche. */
+        transition: transform 0.3s ease; /* Ajoute une animation fluide de 0.3s lors du déplacement de la sidebar. */
     }
     .sidebar.open {
-        transform: translateX(0);                   /* Fait réapparaître le menu. */
+        transform: translateX(0);        /* Ramène la sidebar à sa position initiale quand elle a la classe 'open'. */
     }
     main {
-        margin-left: 0;                             /* Ajuste la marge quand le menu est caché. */
+        margin-left: 0;                 /* Supprime la marge à gauche du contenu principal car la sidebar est cachée. */
     }
-}}
 
+    /* Section mise en page */
+    #about {
+        padding: 2rem 1rem;             /* Réduit les marges intérieures : 2rem haut/bas, 1rem gauche/droite. */
+    }
+    .parcours-container {
+        grid-template-columns: 1fr;      /* Change la grille à une seule colonne au lieu de deux. */
+        gap: 2rem;                       /* Espace de 2rem entre les éléments de la grille. */
+    }
+}
+
+/* Ces règles s'appliquent aux écrans de type tablette (≤ 768px) */
+@media (max-width: 768px) {
+    #about {
+        padding: 1.5rem 0.5rem;         /* Réduit encore les marges intérieures : 1.5rem haut/bas, 0.5rem gauche/droite. */
+    }
+    .parcours-container {
+        gap: 1rem;                      /* Réduit l'espace entre les éléments à 1rem. */
+    }
+    .parcours {
+        padding: 1rem;                  /* Réduit les marges intérieures des boîtes de parcours à 1rem. */
+    }
+}
+
+/* Ces règles s'appliquent aux mobiles (≤ 480px) */
+@media (max-width: 480px) {
+    .parcours-container {
+        gap: 0.5rem;                    /* Réduit encore l'espace entre les éléments à 0.5rem. */
+    }
+    .parcours {
+        padding: 0.8rem;                /* Réduit les marges intérieures des boîtes à 0.8rem. */
+    }
+    /* Ajustements de la taille du texte */
+    .parcours h3 {
+        font-size: 1rem;                /* Réduit la taille des titres à 1rem (16px par défaut). */
+    }
+    .parcours .date {
+        font-size: 0.75rem;             /* Réduit la taille des dates à 0.75rem (12px). */
+    }
+}
