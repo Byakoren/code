@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="index.css" rel="stylesheet">
-    <title>Portfolio de Thomas Gouez</title>
+    <title>Portfolio de Gouez Thomas</title>
 </head>
 
 <body>
+
 
     <!-- Bouton Hamburger pour le responsive -->
     <div class="hamburger" onclick="toggleSidebar()">
@@ -24,7 +25,7 @@
 
         <nav>
             <ul>
-                <li><a href="#intro-text"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="#typing-text"><i class="fas fa-home"></i> Accueil</a></li>
                 <li><a href="#about"><i class="fas fa-user"></i> A Propos</a></li>
                 <li><a href="#skills"><i class="fas fa-laptop-code"></i> Compétences</a></li>
                 <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
@@ -37,10 +38,17 @@
 
     <!-- Contenu principal -->
     <main>
+                <!-- particles.js container en arrière-plan -->
+        <div id="particles-js"></div>
 
-        <section id="intro-text">
+        <!-- Stats - compteur de particules -->
+        <div class="count-particles">
+            <span class="js-count-particles"></span>
+        </div>
+
+
             <h1 id="typing-text" class="animated-text"></h1> 
-        </section>
+
         
         <!-- Section à propos -->
         <section id="about">
@@ -186,6 +194,7 @@
         </div>
     </section>
 
+
     <!-- Section Certifications -->
     <section id="certifications">
         <h2><i class="fas fa-certificate"></i> Certifications</h2>
@@ -288,6 +297,10 @@
         </footer>
         
     </main>
+
+    <!-- Scripts de librairie pour particles.js et stats.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>
