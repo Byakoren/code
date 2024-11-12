@@ -103,6 +103,22 @@
     transform: scale(1.15);                       /* Agrandit au passage de la souris. */ 
 }
 
+/* Partie pour faire que le site scroll si on clique sur un lien du menu */
+html {
+    scroll-behavior: smooth;
+}
+
+section, .parcours, .skill, .certification, .project {
+    opacity: 0;                             /* Invisible par défaut */
+    transform: translateY(30px);            /* Légèrement décalé vers le bas */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transition douce */
+}
+
+section.visible, .parcours.visible, .skill.visible, .certification.visible, .project.visible {
+    opacity: 1;                             /* Visible quand la classe 'visible' est présente */
+    transform: translateY(0);               /* Revient à sa position originale */
+}
+
 /* Contenu principal */
 main, section { 
     position: relative;      /* Définit le positionnement. */ 
@@ -629,3 +645,5 @@ footer {
         font-size: 0.75rem;             /* Réduit la taille des dates à 0.75rem (12px). */
     }
 }
+
+

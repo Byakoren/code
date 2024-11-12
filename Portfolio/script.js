@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const projects = document.querySelectorAll('.project');                 // Tous les projets
     const skills = document.querySelectorAll('.skill');                     // Toutes les compétences
     const certifications = document.querySelectorAll('.certification');     // Toutes les certifications
-    const portfolio = document.querySelectorAll('.project');                // Les projets (doublon à supprimer)
     const parcours = document.querySelectorAll('.parcours');                // Les sections de parcours
     const typingText = document.getElementById('typing-text');              // L'élément pour l'effet machine à écrire
     const chosenText = document.querySelector('.chosen-text');              // Texte choisi pour animation
@@ -13,74 +12,111 @@ document.addEventListener('DOMContentLoaded', function () {
     const text = "Bienvenue sur le Portfolio de Thomas Gouez !";            // Texte à afficher en machine à écrire
     const sidebar = document.querySelector('.sidebar');                     // La barre de navigation latérale
     const hamburger = document.querySelector('.hamburger');                 // Le bouton hamburger
-    let index = 0;                                                          // Index pour l'effet machine à écrire
+    let index = 0;                                                          // Compteur pour l'effet machine à écrire
+    let typingInterval;                                                     // Variable pour stocker l'intervalle d'animation
 
     // Fonction pour fermer le menu
     const closeMenu = () => {
-        sidebar.classList.remove('open');                          // Retire la classe 'open' pour fermer le menu
+        sidebar.classList.remove('open');                                  // Retire la classe 'open' pour masquer la sidebar
     };
 
     // Ajoute un écouteur d'événement sur chaque lien du menu
     document.querySelectorAll('.sidebar a').forEach(link => {
-        link.addEventListener('click', closeMenu);                 // Ferme le menu quand on clique sur un lien
+        link.addEventListener('click', closeMenu);                        // Ferme le menu lors du clic sur un lien
     });
 
-    // Gestion du clic sur le bouton hamburger
+    // Gestion du bouton hamburger
     hamburger.addEventListener('click', () => {
-        sidebar.classList.toggle('open');                         // Bascule l'état du menu (ouvert/fermé)
+        sidebar.classList.toggle('open');                                 // Alterne l'état du menu (ouvert/fermé)
     });
 
-    // Ferme le menu si on clique en dehors du menu et du bouton hamburger
-    document.addEventListener('click', (e) => {
-        if (!sidebar.contains(e.target) && !hamburger.contains(e.target) && sidebar.classList.contains('open')) {
-            closeMenu();
-        }
-    });
+    // Configuration du défilement doux pour la navigation
+    document.querySelectorAll('.sidebar a').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();                                       // Empêche le comportement par défaut du lien
+            
+            // Extrait l'ID de la section cible du href
+            const targetId = this.getAttribute('href').substring(1);      
+            const targetSection = document.getElementById(targetId);      // Récupère l'élément cible
 
-    // Effet machine à écrire
-    if (typingText) {                                               // Vérifie si l'élément existe
-        function typeWriter() {
-            if (index < text.length) {                              // Si on n'a pas fini d'écrire le texte
-                typingText.innerHTML += text.charAt(index);         // Ajoute une lettre
-                index++;                                            // Passe à la lettre suivante
-                setTimeout(typeWriter, 100);                        // Attend 100ms avant la prochaine lettre
-            } else {
-                typingText.classList.add('blink-cursor');           // Ajoute l'effet de curseur clignotant
+            // Animation de défilement doux vers la section
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop,                        // Position de la section cible
+                    behavior: 'smooth'                                   // Animation fluide
+                });
             }
+        });
+    });
+
+    // Gestion des clics en dehors du menu
+    document.addEventListener('click', (e) => {
+        // Vérifie si le clic est en dehors du menu et du bouton hamburger
+        if (!sidebar.contains(e.target) && !hamburger.contains(e.target) && sidebar.classList.contains('open')) {
+            closeMenu();                                                                                                 // Ferme le menu
         }
-        typeWriter();                                               // Lance l'effet machine à écrire
+    });
+
+    // Fonction d'animation machine à écrire
+    function typeWriter() {
+        if (index < text.length) {                                     // Vérifie s'il reste des caractères à écrire
+            typingText.innerHTML += text.charAt(index);                // Ajoute le caractère suivant
+            index++;                                                   // Incrémente le compteur
+            typingInterval = setTimeout(typeWriter, 100);              // Programme le prochain caractère
+        } else {
+            typingText.classList.add('blink-cursor');                  // Active l'animation du curseur
+        }
     }
 
-    // Configuration de l'observateur d'intersection pour les animations
+    // Configuration de l'observateur pour l'effet machine à écrire
+    if (typingText) {
+        const textObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {                           // Si l'élément devient visible
+                    typingText.innerHTML = "";                        // Réinitialise le texte
+                    typingText.classList.remove('blink-cursor');      // Désactive l'animation du curseur
+                    index = 0;                                        // Réinitialise le compteur
+                    clearTimeout(typingInterval);                     // Annule l'animation en cours
+                    typeWriter();                                     // Démarre une nouvelle animation
+                }
+            });
+        }, {
+            threshold: 0.1                                            // Seuil de déclenchement à 10% de visibilité
+        });
+        textObserver.observe(typingText);                             // Démarre l'observation
+    }
+
+    // Configuration de l'observateur pour les animations des sections
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {                             // Si l'élément devient visible
+            if (entry.isIntersecting) {                             // Si l'élément entre dans la vue
                 entry.target.classList.add('visible');              // Ajoute la classe pour l'animation
-                observer.unobserve(entry.target);                   // Arrête d'observer cet élément
+            } else {
+                entry.target.classList.remove('visible');           // Retire la classe d'animation
             }
         });
     }, {
-        threshold: 0.1                                         // Déclenche quand 10% de l'élément est visible
+        threshold: 0.1                                             // Seuil de déclenchement à 10% de visibilité
     });
 
-    // Applique l'observateur à tous les éléments nécessaires
-    sections.forEach(section => observer.observe(section));
-    skills.forEach(skill => observer.observe(skill));
-    certifications.forEach(certification => observer.observe(certification));
-    portfolio.forEach(project => observer.observe(project));
-    parcours.forEach(parcours => observer.observe(parcours));
+    // Application de l'observateur à tous les éléments animés
+    sections.forEach(section => observer.observe(section));                         // Observe les sections
+    skills.forEach(skill => observer.observe(skill));                               // Observe les compétences
+    certifications.forEach(certification => observer.observe(certification));       // Observe les certifications
+    projects.forEach(project => observer.observe(project));                         // Observe les projets
+    parcours.forEach(parcours => observer.observe(parcours));                       // Observe les éléments du parcours
 
-    // Effet de zoom au survol des projets
+    // Gestion des effets de survol sur les projets
     projects.forEach(project => {
-        project.addEventListener('mouseover', () => project.classList.add('zoom'));         // Ajoute le zoom au survol
-        project.addEventListener('mouseout', () => project.classList.remove('zoom'));       // Retire le zoom à la sortie
+        project.addEventListener('mouseover', () => project.classList.add('zoom'));         // Active le zoom au survol
+        project.addEventListener('mouseout', () => project.classList.remove('zoom'));       // Désactive le zoom à la sortie
     });
 
-    // Animations conditionnelles pour le texte choisi et l'icône
-    if (chosenText) {                                                               // Si l'élément existe
-        chosenText.style.animation = 'move-up-down 2s ease-in-out infinite';        // Animation de haut en bas
-        if (fingerIcon) {                                                           // Si l'icône existe aussi
-            fingerIcon.style.animation = 'move-up-down 2s ease-in-out infinite';    // Même animation
+    // Configuration des animations conditionnelles
+    if (chosenText) {                                                                   // Vérifie si l'élément existe
+        chosenText.style.animation = 'move-up-down 2s ease-in-out infinite';            // Animation de rebond
+        if (fingerIcon) {                                                               // Vérifie si l'icône existe
+            fingerIcon.style.animation = 'move-up-down 2s ease-in-out infinite';        // Applique la même animation
         }
     }
 });
