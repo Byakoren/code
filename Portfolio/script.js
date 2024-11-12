@@ -81,23 +81,31 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         }, {
-            threshold: 0.1                                            // Seuil de déclenchement à 10% de visibilité
+            threshold: 0.1                                  // Seuil de déclenchement à 10% de visibilité
         });
         textObserver.observe(typingText);                             // Démarre l'observation
     }
 
-    // Configuration de l'observateur pour les animations des sections
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {                             // Si l'élément entre dans la vue
-                entry.target.classList.add('visible');              // Ajoute la classe pour l'animation
+            if (entry.isIntersecting) {
+                // Si l'élément n'a pas déjà la classe 'visible', ajoutez-la et marquez comme observé
+                if (!entry.target.classList.contains('visible')) {
+                    entry.target.classList.add('visible');
+                    entry.target.setAttribute('data-observed', 'true'); // Marque comme observé
+                }
             } else {
-                entry.target.classList.remove('visible');           // Retire la classe d'animation
+                // Retirez la classe uniquement si elle est observée et visible
+                if (entry.target.getAttribute('data-observed') === 'true') {
+                    entry.target.classList.remove('visible');
+                    entry.target.setAttribute('data-observed', 'false'); // Marque comme non observé
+                }
             }
         });
     }, {
-        threshold: 0.1                                             // Seuil de déclenchement à 10% de visibilité
+        threshold: 0.1 // Ajuste le seuil selon tes préférences
     });
+    
 
     // Application de l'observateur à tous les éléments animés
     sections.forEach(section => observer.observe(section));                         // Observe les sections

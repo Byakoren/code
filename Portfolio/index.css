@@ -18,6 +18,10 @@
     text-align: center;             /* Centrer le texte. */
 }
 
+.animated-text {
+    pointer-events: none;
+}
+
 /* Sidebar */
 .sidebar {
     position: fixed;                                  /* Fixe la sidebar même quand on défile. */
