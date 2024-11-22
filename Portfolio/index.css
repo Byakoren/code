@@ -120,7 +120,7 @@ section, .parcours, .skill, .certification, .project {
 
 section.visible, .parcours.visible, .skill.visible, .certification.visible, .project.visible {
     opacity: 1;                             /* Visible quand la classe 'visible' est présente */
-    transform: translateY(0);               /* Revient à sa position originale */
+    /* transform: translateY(0);               Revient à sa position originale */
 }
 
 /* Contenu principal */
@@ -176,7 +176,7 @@ section {
 
 section.visible {
     opacity: 1;                    /* Rend la section visible lorsqu'elle a la classe 'visible'. */
-    transform: translateY(0);      /* Replace la seciton à sa position d'origine. */
+    /* transform: translateY(0);      Replace la seciton à sa position d'origine. */
 }
 
 section h2 {
@@ -301,7 +301,7 @@ section h2 {
 
 .skill.visible, .project.visible {
     opacity: 1;                      /* On le rend visible si on lui met la classe 'visible'. */
-    transform: translateY(0);        /* Ramène l'élément à sa position initiale. */
+    /* transform: translateY(0);        Ramène l'élément à sa position initiale. */
 }
 
 /* Style au passage de la souris  */
@@ -427,7 +427,7 @@ footer {
 
 .certification.visible {
     opacity: 1;                        /* Le rend visible avec la classe 'visible'. */
-    transform: translateY(0);          /* Remet l'élément à sa position d'origine. */
+    /* transform: translateY(0);          Remet l'élément à sa position d'origine. */
 }
 
 .certification:hover {
@@ -672,5 +672,4 @@ footer {
     .parcours .date {
         font-size: 0.75rem;             /* Réduit la taille des dates à 0.75rem (12px). */
     }
-}
-
+}}
