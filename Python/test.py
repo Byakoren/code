@@ -234,3 +234,10 @@ for turn in range(4):
     if turn == 3:
       print("Game Over")
 
+def digit_sum(n):
+  total = 0
+  for digit in str(n): 
+    total += int(digit)
+  return total
+
+print(digit_sum(1234))

@@ -142,3 +142,4 @@ while True:
     if replay != "oui":
         print("Merci d'avoir joué ! À bientôt.")
         break
+    
